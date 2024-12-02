@@ -358,9 +358,13 @@ margin-top: -90px;
 
 .hpparagraph{
 inline-size:30%;
-margin-left: 110vh;
+margin-left: 123vh;
 font-size: 120%;
-    margin-top: -2.5vh;
+background-image:url(gfshrtfdfgj.png);
+background-size:63.5vh;
+background-repeat: no-repeat;
+background-position: center;
+filter:blur(px);
 }
 
 
@@ -381,7 +385,7 @@ font-size: 120%;
 }
 
 #footer-left img {
-    width:70px;
+    width:90px;
 }
 
 #social {
@@ -391,3 +395,16 @@ font-size: 120%;
     flex-direction: row;
     justify-content: space-between;
 }
+
+div.vertical-line{
+    width: 1px;
+    background-color: rgb(255, 255, 255);
+    float: left;
+    border: 2px ridge rgb(255, 255, 255) ;
+    border-radius: 2px;
+    margin-left: 103vh;
+    transform: rotate(30deg);
+    margin-top: -59px;
+  }
+
+
