@@ -96,6 +96,7 @@ header nav ul li a {
 
 header nav ul li a.active {
     color: rgb(255, 0, 0);
+    text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
 }
 
 header nav ul li {
@@ -346,7 +347,7 @@ footer a {
 margin-top: -90px;
 }
 
-#hpimage{
+.hpimage{
     background-position-x: center;
     background-image: url(hpimg.png);
     height: 75vh;
@@ -406,5 +407,111 @@ div.vertical-line{
     transform: rotate(30deg);
     margin-top: -59px;
   }
+
+.thenemesistitle{
+    margin-left: 40vh;
+    margin-top: 20vh;
+}
+
+#nemesishero {
+    background-image: url(black-ops1.jpg);
+}
+
+#nemesishero {
+    height: 894px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100vh;
+    margin: 0;
+    background-attachment: fixed;
+    background-position: 0 67%;
+    background-size: cover;
+}
+
+#nemesishero article {
+    position: absolute;
+    margin-left: -1300px;
+    margin-top: -40vh;
+    font-family: "Julius Sans One";
+    width: auto;
+    height: auto;
+    color: white;
+    font-size: 27px;
+    line-height: 0.1;
+    text-align: center;
+}
+
+#nemesishero h1 {
+    color: #FFF;
+    text-shadow: 0px 10px 33.5px #000;
+    font-family: "Julius Sans One";
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 128px;
+}
+
+.exploreourmodels{
+ font-size: 5vh;
+ margin-left: 40%;
+}
+
+.blackwidowhp{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top{
+  position: absolute;
+  top: 40px;
+  right:1200px;
+}
+
+.top2{
+    position: absolute;
+  top: 40px;
+  right:1200px;
+}
+
+.nemesishp{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.button1{
+    background-color: rgb(0, 0, 0);
+        border-radius: 5em;
+        font-size: 1.3rem;
+        color: white;
+        padding: 0.5em 1em;
+        display: inline-block;
+        text-decoration: none;
+        box-shadow: 0 3px 5px rgba(255, 255, 255, 0.33);
+        transition: color ease 200ms, background ease 200ms;
+        letter-spacing: 1.7px;
+        position: absolute;
+        top: 40vh;
+        right:1050px;
+    } 
+
+.button2{
+background-color: rgb(0, 0, 0);
+    border-radius: 5em;
+    font-size: 1.3rem;
+    color: white;
+    padding: 0.5em 1em;
+    display: inline-block;
+    text-decoration: none;
+    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.33);
+    transition: color ease 200ms, background ease 200ms;
+    letter-spacing: 1.7px;
+    position: absolute;
+    top: 40vh;
+    right:800px;
+}
 
 
