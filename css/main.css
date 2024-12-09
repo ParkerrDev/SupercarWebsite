@@ -64,16 +64,26 @@ header {
     justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
-    margin-top: -15vh;
+    margin-top: -12vh;
 }
 
-header img {
+header nav ul img {
     height: 8vh;
-    /* Fixed height for the logo */
-    width: auto;
-    /* Maintain aspect ratio */
-    justify-self: center;
-    align-self: center;
+}
+
+#image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav ul li a.active {
+    color: rgb(255, 0, 0);
+    text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+header nav ul li a {
+    padding: none;
 }
 
 header nav {
@@ -81,7 +91,7 @@ header nav {
     display: flex;
     justify-content: center;
     width: 100%;
-    max-width: 1440px;
+    max-width: 80vw;
 }
 
 header nav ul {
@@ -104,34 +114,33 @@ header nav ul {
     line-height: normal;
 }
 
+header nav ul li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30em;
+    margin: 0;
+}
+
+header nav ul li #cart-and-search {
+    flex-direction: row;
+}
+
 header nav ul li a {
     display: block;
-    padding: 1em;
     border-radius: 5px;
     background: transparent;
-
-
-
     text-decoration: none;
     text-shadow: -2px 2px 10px #00263a;
     text-transform: uppercase;
     color: white;
 }
 
-header nav ul li a.active {
-    color: rgb(255, 0, 0);
-    text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
-}
-
-header nav ul li {
-    width: auto;
-    margin: 0;
-}
 
 header nav.opaque {
     opacity: 1;
     background-color: black;
-    box-shadow: 0 .25rem .5rem rgba(0,0,0,.1);
+    box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.1);
     border: 1px solid white;
     border-radius: 58px;
     margin-top: 1vh;
@@ -140,23 +149,13 @@ header nav.opaque {
 
 }
 
-header nav ul li a:hover {
-    border-radius: 20px;
+/* header nav ul li:hover {
     background-color: #3a3a3a7a;
     text-decoration: none;
     text-shadow: -2px 2px 10px #00263a00;
     color: white;
-    transition: all .1s;
-}
-
-header nav ul li svg:hover {
-    border-radius: 5px;
-    background-color: #3a3a3a7a;
-    text-decoration: none;
-    text-shadow: -2px 2px 10px #00263a00;
-    color: white;
-    transition: all .1s;
-}
+    transition: all .2s;
+} */
 
 #hero {
     height: 894px;
@@ -210,19 +209,12 @@ body:not(#home) #hero h1 {
     line-height: 0.1;
 }
 
-.description {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 30px;
-    padding-top: 50px;
-}
-
 .button {
     display: inline-block;
     margin-left: 10px;
     padding: 0.5em 1em;
     border-radius: 0.33em;
-    background-color: #005D8F;
+    background-color: black;
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
@@ -355,7 +347,7 @@ footer hr {
     color: white;
 }
 
-.side-menu.open a{
+.side-menu.open a {
     color: white;
 }
 

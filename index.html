@@ -8,7 +8,7 @@
     <title>Trion</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css?family=Inter&display=swap" rel="stylesheet">
-    <script async src="js/main.js"></script>
+    <!-- <script async src="js/main.js"></script> -->
 </head>
 
 <body id="home">
@@ -33,11 +33,14 @@
                 
                 <li><a class="active" href="/">Home</a></li>
                 <li><a href="events.html">Events</a></li>
-                <li><img src="imgs/logo.png" alt="Trion Logo"></li>
+                <li>
+                    <div id="image-container"><img src="imgs/logo.png" alt="Trion Logo"></div>
+                </li>
                 <li><a href="about-us.html">About Us</a></li>
                 <li><a href="shop.html">Shop</a></li>
-                <li><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="37" height="37"
-                        viewBox="0,0,256,256">
+
+                <li id="cart-and-search"><svg width="44" height="42" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+                        width="37" height="37" viewBox="0,0,256,256">
                         <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
                             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                             font-family="none" font-weight="none" font-size="none" text-anchor="none"
@@ -48,13 +51,14 @@
                                 </path>
                             </g>
                         </g>
-                    </svg></li>
-                <li><a href="CartHub.html"><svg width="44" height="42" viewBox="0 0 48 46" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    
-                    <path id="Icon"
-                            d="M2 2H10L15.36 28.78C15.5429 29.7008 16.0438 30.5279 16.7751 31.1166C17.5064 31.7053 18.4214 32.018 19.36 32H38.8C39.7386 32.018 40.6536 31.7053 41.3849 31.1166C42.1162 30.5279 42.6171 29.7008 42.8 28.78L46 12H12M20 42C20 43.1046 19.1046 44 18 44C16.8954 44 16 43.1046 16 42C16 40.8954 16.8954 40 18 40C19.1046 40 20 40.8954 20 42ZM42 42C42 43.1046 41.1046 44 40 44C38.8954 44 38 43.1046 38 42C38 40.8954 38.8954 40 40 40C41.1046 40 42 40.8954 42 42Z"
-                            stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg></a>
+                    </svg>
+                    <a href="CartHub.html"><svg width="44" height="42" viewBox="0 0 48 46" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+
+                            <path id="Icon"
+                                d="M2 2H10L15.36 28.78C15.5429 29.7008 16.0438 30.5279 16.7751 31.1166C17.5064 31.7053 18.4214 32.018 19.36 32H38.8C39.7386 32.018 40.6536 31.7053 41.3849 31.1166C42.1162 30.5279 42.6171 29.7008 42.8 28.78L46 12H12M20 42C20 43.1046 19.1046 44 18 44C16.8954 44 16 43.1046 16 42C16 40.8954 16.8954 40 18 40C19.1046 40 20 40.8954 20 42ZM42 42C42 43.1046 41.1046 44 40 44C38.8954 44 38 43.1046 38 42C38 40.8954 38.8954 40 40 40C41.1046 40 42 40.8954 42 42Z"
+                                stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg></a>
                 </li>
             </ul>
         </nav>
