@@ -222,12 +222,16 @@ body:not(#home) #hero h1 {
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
 }
 
-article p {
+.article p {
     font-weight: lighter;
 }
 
 .halves p {
     font-size: 32px;
+}
+
+.halves article{
+    width: 48%;
 }
 
 .split article {
@@ -533,4 +537,28 @@ footer a {
     top: 40vh;
     right: 800px;
 } */
+
+.halves article {
+    width: 48%;
+}
+
+.halves article img{
+    height: 400px;
+    width:100%;
+}
+
+.aboutus{
+margin-top: 70px;
+margin-top: 59%;
+}
+
+.aboutus1{
+margin-top: 70px;
+width: 200%;
+}
+
+.rp{
+
+}
+
 
