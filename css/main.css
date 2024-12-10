@@ -301,7 +301,7 @@ footer {
     width: 30%;
 }
 
-.halves {
+.halves article{
     width: 48%;
 }
 
@@ -561,32 +561,28 @@ div.vertical-line {
     right: 800px;
 } */
 
-<<<<<<< HEAD
+
 .halves article {
     width: 48%;
 }
 
 .halves article img{
-    height: 400px;
-    width:100%;
+margin-top: 
 }
 
 .aboutus{
 margin-top: 70px;
-margin-top: 59%;
+margin-top: 39%;
 }
 
 .aboutus1{
 margin-top: 70px;
-width: 200%;
-}
-
-.rp{
-
+width: 150%;
 }
 
 
-=======
+
+
 
 /* body {
     display: flex;
@@ -613,4 +609,4 @@ width: 200%;
     transform: rotate(45deg);
     transform-origin: 1px 1px;
 }
->>>>>>> 0dcdd8adec5e5bf12324c31fb6190eae90333261
+
