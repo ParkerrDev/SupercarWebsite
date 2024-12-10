@@ -1,7 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Julius+Sans+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+::-webkit-scrollbar {
+  width: 2vh;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
+  background-image: url(../svg/road.svg);
+  transform-box: fill-box;
+  transform-origin: center;
+  background-repeat: repeat;
+  background-size: 1000%;
+  border: solid 2px white;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: transparent;
+  background-image: url(../svg/car-top-view-icon.svg);
+  width: 100%;
+  background-repeat: no-repeat;
+}
+
+::-webkit-scrollbar-track-piece  {
+    height: 50%;
+}
 
 * {
     box-sizing: border-box;
@@ -251,11 +283,6 @@ footer {
     text-align: center;
 }
 
-footer hr {
-    width: 62%;
-    margin: 0 auto;
-}
-
 .row {
     display: flex;
     flex-direction: row;
@@ -376,11 +403,9 @@ footer a {
 
 .hpimage {
     background-position-x: center;
-    /* background-image: url(../imgs/nemesis-orange-u.png); */
-    /* height: 56vh;
-    width: auto; */
-    /* width: 100vw;
-    height: 56vh; */
+    background-image: url(../imgs/nemesis-orange-u.png);
+    height: 56vh;
+    width: 100%;
     border: 1px solid #FFF;
     flex-shrink: 0;
     background-size: cover;
@@ -431,15 +456,13 @@ footer a {
     justify-content: space-between;
 }
 
-/* div.vertical-line {
-    width: 1px;
+div.vertical-line {
+    width: 3px;
     background-color: rgb(255, 255, 255);
     float: left;
-    border: 2px ridge rgb(255, 255, 255);
-    border-radius: 2px;
     margin-left: 103vh;
     transform: rotate(30deg);
-    margin-top: -59px;
+    margin-top: -60px;
 }
 
 .thenemesistitle {
@@ -485,7 +508,7 @@ footer a {
     font-style: normal;
     font-weight: 400;
     font-size: 128px;
-} */
+}
 
 
 
@@ -538,6 +561,7 @@ footer a {
     right: 800px;
 } */
 
+<<<<<<< HEAD
 .halves article {
     width: 48%;
 }
@@ -562,3 +586,31 @@ width: 200%;
 }
 
 
+=======
+
+/* body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+
+.box {
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid rgb(255, 255, 255);
+    position: relative;
+}
+
+
+.box:after {
+    content: ''; 
+    height: 1px;
+    width: 10vw;
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    right: 50vw;
+    top: 0px; 
+    transform: rotate(45deg);
+    transform-origin: 1px 1px;
+}
+>>>>>>> 0dcdd8adec5e5bf12324c31fb6190eae90333261
