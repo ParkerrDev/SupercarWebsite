@@ -1,7 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+:root {
+    --scrollbar-height: 475px;
+}
+
 ::-webkit-scrollbar {
-    width: 3vh;
+    width: 1.5vw;
 }
 
 /* Track */
@@ -18,6 +22,7 @@
     border-bottom: none;
     background-position-x: 5%;
     background-clip: content-box;
+    height: 10em;
 }
 
 /* Handle */
@@ -27,13 +32,23 @@
     width: 100%;
     background-repeat: no-repeat;
     background-clip: content-box;
-    height: 1%;
+    border: 1px solid white;
+    max-height: 10px;
 }
 
-::-webkit-scrollbar-track-piece:end {
-    background: transparent;
-    margin-bottom: -50vh;
+::-webkit-scrollbar-track-piece {
+    margin: 0;
 }
+
+#scroll-bar-spacing ::-webkit-scrollbar-track-piece:end {
+    background: transparent;
+}
+
+
+::-webkit-scrollbar-button {
+    width: 0;
+    height: 0;
+  }
 
 * {
     box-sizing: border-box;
@@ -176,7 +191,7 @@ header nav.opaque {
     border: 1px solid white;
     border-radius: 58px;
     margin-top: 1vh;
-    transition: background ease 300ms;
+    transition: all ease 200ms;
     max-height: 10vh;
 
 }
