@@ -1,71 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-:root {
-    --scrollbar-height: 475px;
-}
-
 ::-webkit-scrollbar {
+    background-clip: content-box;
+    background-image: url(../svg/road.svg);
+    background-position-x: 5%;
+    background-repeat: repeat;
+    background-size: 1000%;
+    border-bottom: none;
+    border-top: none;
+    border: solid 2px white;
+    display: block;
+    height: 10em;
+    transform-box: fill-box;
+    transform-origin: center;
     width: 1.5vw;
 }
 
-/* Track */
-::-webkit-scrollbar {
-    display: block;
-    background: black;
-    background-image: url(../svg/road.svg);
-    transform-box: fill-box;
-    transform-origin: center;
-    background-repeat: repeat;
-    background-size: 1000%;
-    border: solid 2px white;
-    border-top: none;
-    border-bottom: none;
-    background-position-x: 5%;
-    background-clip: content-box;
-    height: 10em;
-}
-
-/* Handle */
 ::-webkit-scrollbar-thumb {
-    background: none;
-    background-image: url(../svg/car-top-view-icon.svg);
-    width: 100%;
-    background-repeat: no-repeat;
     background-clip: content-box;
+    background-image: url(../svg/car.svg);
+    background-repeat: no-repeat;
     border: 1px solid white;
-    max-height: 10px;
+    width: 100%;
 }
 
 ::-webkit-scrollbar-track-piece {
     margin: 0;
 }
 
-#scroll-bar-spacing ::-webkit-scrollbar-track-piece:end {
+::-webkit-scrollbar-track-piece:end {
     background: transparent;
 }
-
-
-::-webkit-scrollbar-button {
-    width: 0;
-    height: 0;
-  }
 
 * {
     box-sizing: border-box;
 }
 
 body {
-    margin: 0;
     background: -webkit-linear-gradient(top, #1E2034 0%, #000000 50%, #1E2034 100%);
+    color: white;
     font-family: "Quattrocento Sans", sans-serif;
     font-size: 20px;
-    color: white;
+    margin: 0;
 }
 
 img {
     max-width: 100%;
     padding: 0.5rem;
-    border-radius: 1rem;
 }
 
 
@@ -75,9 +56,9 @@ h3,
 h4,
 h5,
 h6 {
+    font-size: 2rem;
     margin-bottom: 0.5em;
     margin-top: 0;
-    font-size: 2rem;
 }
 
 h1,
@@ -86,42 +67,34 @@ h3,
 h4,
 h5,
 h6.center {
+    color: #FFF;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     flex-shrink: 0;
-    color: #FFF;
     font-family: "Days One";
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
+    justify-content: center;
     line-height: normal;
     text-align: center;
 }
 
-
-
 header {
-    font-family: "Days One", sans-serif;
-    position: sticky;
-    top: 0;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
     align-items: center;
     background-color: rgba(0, 0, 0, 0);
+    display: flex;
+    font-family: "Days One", sans-serif;
+    justify-content: center;
     margin-top: -12vh;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 2;
 }
 
 header nav ul img {
     height: 8vh;
-}
-
-#image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 header nav ul li a.active {
@@ -134,39 +107,38 @@ header nav ul li a {
 }
 
 header nav {
-    font-family: "Days One", sans-serif;
+    border-radius: 5rem;
     display: flex;
+    font-family: "Days One", sans-serif;
     justify-content: center;
-    width: 100%;
     max-width: 80vw;
+    width: 100%;
 }
 
 header nav ul {
-    display: flex;
-    justify-content: space-around;
     align-items: center;
-    width: 100%;
-    margin: 0;
-    padding: 1rem;
-    border-radius: 1rem;
     background: transparent;
-    list-style: none;
-
     color: #FFF;
-    text-align: center;
+    display: flex;
     font-family: "Days One";
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
+    justify-content: space-around;
     line-height: normal;
+    list-style: none;
+    margin: 0;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
 }
 
 header nav ul li {
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: center;
-    width: 30em;
     margin: 0;
+    width: 30em;
 }
 
 header nav ul li #cart-and-search {
@@ -174,25 +146,25 @@ header nav ul li #cart-and-search {
 }
 
 header nav ul li a {
-    display: block;
-    border-radius: 5px;
     background: transparent;
+    border-radius: 5px;
+    color: white;
+    display: block;
     text-decoration: none;
     text-shadow: -2px 2px 10px #00263a;
     text-transform: uppercase;
-    color: white;
 }
 
 
 header nav.opaque {
-    opacity: 1;
     background-color: black;
-    box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.1);
+    border-radius: 5rem;
     border: 1px solid white;
-    border-radius: 58px;
+    box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.1);
     margin-top: 1vh;
-    transition: all ease 200ms;
     max-height: 10vh;
+    opacity: 1;
+    transition: all ease 200ms;
 
 }
 
@@ -206,20 +178,6 @@ header nav ul li svg:hover {
     transition: all .2s;
 }
 
-#hero {
-    height: 894px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    margin: 0;
-    background-attachment: fixed;
-    background-position: 0 67%;
-    background-size: cover;
-}
-
-
 body:not(#home) #hero {
     height: 50vh;
 }
@@ -228,47 +186,95 @@ body:not(#home) #hero h1 {
     font-size: 3rem;
 }
 
+main {
+    margin-top: 20vh;
+}
+
+#diagnol-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: 32px;
+}
+
+#diagnol-row article {
+    background-repeat: no-repeat;
+    background-image: url(../imgs/nemesis-side.png);
+    width: 55%;
+    margin: none;
+    border: none;
+
+}
+
+#diagnol-row article p{
+    backdrop-filter: blur(20px);
+    padding: 50px;
+    margin: 0;
+}
+
+#diagnol-row img {
+    height: auto;
+    object-fit: cover;
+    margin: 0;
+    width: 45%;
+    border: none;
+}
+
 #hero {
+    align-items: center;
+    background-attachment: fixed;
     background-image: url(../imgs/hero-scaled.png);
+    background-position: 0 67%;
+    background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    height: 100vh;
+    justify-content: space-around;
+    margin: 0;
 }
 
 #hero article {
-    position: absolute;
+    color: white;
+    font-family: "Julius Sans One";
+    font-size: 2rem;
+    height: auto;
+    line-height: 0.1;
     margin-left: -1300px;
     margin-top: -40vh;
-    font-family: "Julius Sans One";
-    width: auto;
-    height: auto;
-    color: white;
-    /* font-size: 27px; */
-    line-height: 0.1;
+    position: absolute;
     text-align: center;
-
-    font-size: 2rem;
+    width: auto;
 }
 
 #hero h1 {
     color: #FFF;
-    text-shadow: 0px 10px 33.5px #000;
     font-family: "Julius Sans One";
+    font-size: 128px;
     font-size: 128px;
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
     line-height: 0.1;
+    text-shadow: 0px 10px 33.5px #000;
+}
+
+#logo-container {
+    align-items: center;
+    display: flex;
+    justify-content: center;
 }
 
 .button {
+    background-color: black;
+    border-radius: 0.33em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
+    color: white;
     display: inline-block;
+    font-size: 1.5rem;
     margin-left: 10px;
     padding: 0.5em 1em;
-    border-radius: 0.33em;
-    background-color: black;
-    font-size: 1.5rem;
     text-decoration: none;
-    color: white;
     transition: color ease 200ms, background ease 200ms;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
 }
 
 .article p {
@@ -279,23 +285,35 @@ body:not(#home) #hero h1 {
     font-size: 32px;
 }
 
-.halves article{
+.halves article {
     width: 48%;
 }
 
+/* .halves h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 48%;
+} */
+
 .split article {
-    width: 50%;
     padding: 0vh;
+    width: 50%;
+}
+
+.quarter article {
+    padding: 0vh;
+    width: 25%;
 }
 
 footer {
+    align-items: center;
     border: 2px white solid;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
-    min-height: 30vh;
     margin-top: 2em;
+    min-height: 30vh;
     padding: 1rem 0;
     text-align: center;
 }
@@ -305,9 +323,9 @@ footer {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: 0 auto;
     margin-top: 2em;
+    margin: 0 auto;
+    max-width: 1280px;
 }
 
 .row.full {
@@ -318,7 +336,7 @@ footer {
     width: 30%;
 }
 
-.halves article{
+.halves article {
     width: 48%;
 }
 
@@ -343,9 +361,9 @@ footer {
 
 .cards article a,
 .card a {
+    float: left;
     margin-bottom: 1rem;
     margin-right: 0rem;
-    float: left;
 }
 
 .cards .button,
@@ -358,31 +376,31 @@ footer {
 }
 
 .side-menu {
-    display: flex;
     align-items: center;
+    background-color: #000000;
+    border-radius: 0 40px 40px 0;
+    display: flex;
     flex-direction: column;
-    justify-content: center;
     font-family: "Days One", sans-serif;
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
+    justify-content: center;
     left: 0;
-    background-color: #000000;
     overflow-x: hidden;
-    transition: 0.2s;
     padding-top: 60px;
-    border-radius: 0 40px 40px 0;
+    position: fixed;
+    top: 0;
+    transition: 0.2s;
+    width: 0;
+    z-index: 1;
 }
 
 .side-menu a {
-    text-align: center;
-    padding: 15px 35px;
-    text-decoration: none;
-    font-size: 40px;
     color: black;
     display: block;
+    font-size: 40px;
+    padding: 15px 35px;
+    text-align: center;
+    text-decoration: none;
     transition: 0.3s;
 }
 
@@ -391,8 +409,8 @@ footer {
 }
 
 .side-menu.open {
-    width: 450px;
     color: white;
+    width: 450px;
 }
 
 .side-menu.open a {
@@ -404,45 +422,40 @@ footer a {
 }
 
 .movethistotheleft {
-    margin-left: -190vh;
     font-size: 36px;
+    margin-left: -190vh;
 }
 
 .myfooterimg {
-    width: 70px;
     margin-left: -177vh;
     margin-top: -10vh;
+    width: 70px;
 }
 
 .movethisup {
     margin-top: -90px;
 }
 
-.hpimage {
-    background-position-x: center;
-    background-image: url(../imgs/nemesis-orange-u.png);
-    height: 56vh;
-    width: 100%;
-    border: 1px solid #FFF;
-    flex-shrink: 0;
+#hpimage {
+    align-items: center;
+    background-attachment: fixed;
+    background-image: url(../imgs/nemesis-orange.png);
+    background-position: 0 67%;
     background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-
+    display: flex;
+    flex-shrink: 0;
+    height: 100vh;
+    justify-content: space-around;
+    margin: 0;
 }
 
 
 
-.hpparagraph {
+/* .hpparagraph {
+    font-size: 120%;
     inline-size: 30%;
     margin-left: 123vh;
-    font-size: 120%;
-    background-image: url(../imgs/gfshrtfdfgj.png);
-    background-size: 63.5vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    filter: blur(px);
-}
+} */
 
 
 #privacy {
@@ -451,14 +464,14 @@ footer a {
 
 
 #footer-left {
-    position: absolute;
-    font-family: "Goldman";
-    text-align: center;
-    justify-content: center;
     display: flex;
     flex-direction: row;
-    margin-left: -177vh;
+    font-family: "Goldman";
     font-size: 28px;
+    justify-content: center;
+    margin-left: -177vh;
+    position: absolute;
+    text-align: center;
 }
 
 #footer-left img {
@@ -466,20 +479,20 @@ footer a {
 }
 
 #social {
-    position: absolute;
-    margin-right: -177vh;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    margin-right: -177vh;
+    position: absolute;
 }
 
 div.vertical-line {
-    width: 3px;
     background-color: rgb(255, 255, 255);
     float: left;
     margin-left: 103vh;
-    transform: rotate(30deg);
     margin-top: -60px;
+    transform: rotate(30deg);
+    width: 3px;
 }
 
 .thenemesistitle {
@@ -487,148 +500,85 @@ div.vertical-line {
     margin-top: 20vh;
 }
 
+/* #diagnol-image {
+    background-image: url(../imgs/nemesis-back.png);
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    width: 75vw;
+    height: 75vw;
+    margin: 0;
+}
+
+#blurred-diagnol-image {
+    background-image: url(../imgs/nemesis-side.png);
+    background-repeat: no-repeat;
+    background-size: 50vw;
+    width: 75vw;
+    height: 75vw;
+    margin: 0;
+} */
+
+
 #nemesishero {
-    background-image: url(../imgs/black-ops1.jpg);
+    background-image: url(../imgs/nemesis.jpg);
 }
 
 #nemesishero {
-    height: 894px;
-    flex-shrink: 0;
-    display: flex;
     align-items: center;
-    justify-content: space-around;
-    height: 100vh;
-    margin: 0;
     background-attachment: fixed;
     background-position: 0 67%;
     background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    height: 100vh;
+    height: 894px;
+    justify-content: space-around;
+    margin: 0;
 }
 
 #nemesishero article {
-    position: absolute;
+    color: white;
+    font-family: "Julius Sans One";
+    font-size: 27px;
+    height: auto;
+    line-height: 0.1;
     margin-left: -1300px;
     margin-top: -40vh;
-    font-family: "Julius Sans One";
-    width: auto;
-    height: auto;
-    color: white;
-    font-size: 27px;
-    line-height: 0.1;
+    position: absolute;
     text-align: center;
+    width: auto;
 }
 
 #nemesishero h1 {
     color: #FFF;
-    text-shadow: 0px 10px 33.5px #000;
     font-family: "Julius Sans One";
+    font-size: 128px;
     font-size: 128px;
     font-style: normal;
     font-weight: 400;
-    font-size: 128px;
+    text-shadow: 0px 10px 33.5px #000;
 }
-
-
-
-.car-links-button {
-    background-color: rgb(0, 0, 0);
-    /* border-radius: 5em; */
-    border: solid white 5rem;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0.5em 1em;
-    /* display: inline-block; */
-    text-decoration: none;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.33);
-    transition: color ease 200ms, background ease 200ms;
-    letter-spacing: 1.7px;
-    position: absolute;
-    /* top: 40vh;
-    right: 1050px; */
-}
-
-/* .button1 {
-    background-color: rgb(0, 0, 0);
-    border-radius: 5em;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0.5em 1em;
-    display: inline-block;
-    text-decoration: none;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.33);
-    transition: color ease 200ms, background ease 200ms;
-    letter-spacing: 1.7px;
-    position: absolute;
-    top: 40vh;
-    right: 1050px;
-}
-
-.button2 {
-    background-color: rgb(0, 0, 0);
-    border-radius: 5em;
-    font-size: 1.3rem;
-    color: white;
-    padding: 0.5em 1em;
-    display: inline-block;
-    text-decoration: none;
-    box-shadow: 0 3px 5px rgba(255, 255, 255, 0.33);
-    transition: color ease 200ms, background ease 200ms;
-    letter-spacing: 1.7px;
-    position: absolute;
-    top: 40vh;
-    right: 800px;
-} */
-
 
 .halves article {
     width: 48%;
 }
 
 
-.rich{
+.rich {
     width: 153%;
 }
 
-.patterson{
-    margin-top:9vh;
-    border: solid; 
+.patterson {
+    border: solid;
+    margin-top: 9vh;
 }
 
-.aboutus{
-margin-top: 70px;
-margin-top: 39%;
+.aboutus {
+    margin-top: 39%;
+    margin-top: 70px;
 }
 
-.aboutus1{
-margin-top: 70px;
-width: 150%;
+.aboutus1 {
+    margin-top: 70px;
+    width: 150%;
 }
-
-
-
-
-
-/* body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-} */
-
-/* .box {
-    min-height: 200px;
-    width: 100%;
-    border: 1px solid rgb(255, 255, 255);
-    position: relative;
-}
-
-
-.box:after {
-    content: '';
-    height: 1px;
-    width: 32.4vw;
-    background-color: rgb(255, 255, 255);
-    position: absolute;
-    right: 50vw;
-    top: 0px;
-    transform: rotate(-45deg);
-    transform-origin: 1px 1px;
-} */
