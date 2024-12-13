@@ -373,6 +373,8 @@ footer {
 
 .row.halves>img {
     width: 48%;
+    height: 20%;
+    margin-top: 17vh;
 }
 
 .side-menu {
