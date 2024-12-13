@@ -102,6 +102,12 @@ header nav ul li a.active {
     text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
 }
 
+
+header nav ul li svg.active {
+    color: rgb(255, 0, 0);
+    text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
 header nav ul li a {
     padding: none;
 }
@@ -207,7 +213,7 @@ main {
 
 }
 
-#diagnol-row article p{
+#diagnol-row article p {
     backdrop-filter: blur(20px);
     padding: 50px;
     margin: 0;
@@ -313,7 +319,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     margin-top: 2em;
-    min-height: 30vh;
+    min-height: 20vh;
     padding: 1rem 0;
     text-align: center;
 }
@@ -419,6 +425,11 @@ footer {
     color: white;
 }
 
+.side-menu.open a.active {
+    color: rgb(255, 0, 0);
+    text-shadow: -2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+
 footer a {
     color: white;
 }
@@ -449,6 +460,12 @@ footer a {
     height: 100vh;
     justify-content: space-around;
     margin: 0;
+}
+
+#clickable-chair-outline {
+    position: relative;
+    top: -1vh;
+    left: 29vw;
 }
 
 
@@ -501,25 +518,6 @@ div.vertical-line {
     margin-left: 40vh;
     margin-top: 20vh;
 }
-
-/* #diagnol-image {
-    background-image: url(../imgs/nemesis-back.png);
-    background-repeat: no-repeat;
-    background-size: 50vw;
-    width: 75vw;
-    height: 75vw;
-    margin: 0;
-}
-
-#blurred-diagnol-image {
-    background-image: url(../imgs/nemesis-side.png);
-    background-repeat: no-repeat;
-    background-size: 50vw;
-    width: 75vw;
-    height: 75vw;
-    margin: 0;
-} */
-
 
 #nemesishero {
     background-image: url(../imgs/nemesis.jpg);
