@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-::-webkit-scrollbar {
+/* ::-webkit-scrollbar:vertical {
     background-clip: content-box;
     background-image: url(../svg/road.svg);
     background-position-x: 5%;
@@ -16,7 +16,7 @@
     width: 1.5vw;
 }
 
-::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb:vertical 
     background-clip: content-box;
     background-image: url(../svg/car.svg);
     background-repeat: no-repeat;
@@ -24,13 +24,13 @@
     width: 100%;
 }
 
-::-webkit-scrollbar-track-piece {
+::-webkit-scrollbar-track-piece:vertical {
     margin: 0;
 }
 
-::-webkit-scrollbar-track-piece:end {
+::-webkit-scrollbar-track-piece:vertical:end {
     background: transparent;
-}
+} */
 
 * {
     box-sizing: border-box;
@@ -86,11 +86,11 @@ header {
     display: flex;
     font-family: "Days One", sans-serif;
     justify-content: center;
-    margin-top: -12vh;
-    position: sticky;
+    z-index: 100;
+    margin-top: 0;
+    position: fixed;
     top: 0;
     width: 100%;
-    z-index: 2;
 }
 
 header nav ul img {
@@ -117,7 +117,7 @@ header nav {
     display: flex;
     font-family: "Days One", sans-serif;
     justify-content: center;
-    max-width: 80vw;
+    max-width: 90%;
     width: 100%;
 }
 
@@ -192,7 +192,7 @@ body:not(#home) #hero h1 {
     font-size: 3rem;
 }
 
-main {
+body:not(#home) main {
     margin-top: 20vh;
 }
 
@@ -201,43 +201,86 @@ main {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: 32px;
+    font-size: 24px;
+    position: relative;
+    overflow: hidden;
+    height: 500px;
+    border: 1px solid white;
+}
+
+#diagnol-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#diagnol-row::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 47%;
+    width: 80%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../imgs/nemesis-side.png);
+    transform: skewX(-20deg);
+    z-index: 2;
+    outline: 1px solid white;
 }
 
 #diagnol-row article {
-    background-repeat: no-repeat;
-    background-image: url(../imgs/nemesis-side.png);
-    width: 55%;
-    margin: none;
+    width: 50%;
+    margin: 0;
     border: none;
-
+    position: relative;
+    height: 100%;
+    padding: 2rem;
+    z-index: 3;
 }
 
 #diagnol-row article p {
-    backdrop-filter: blur(20px);
-    padding: 50px;
+    position: relative;
+    z-index: 4;
+    padding: 0.5rem;
     margin: 0;
+    width: 90%;
+    color: white;
+    text-shadow: #000 0px 0px 10px;
+    /* background-color: rgba(0, 0, 0, 0.25); */
+    /* backdrop-filter: blur(5px); */
 }
 
-#diagnol-row img {
-    height: auto;
+/* #diagnol-row img {
+    height: 100%;
+    width: 50%;
     object-fit: cover;
     margin: 0;
-    width: 45%;
     border: none;
-}
+    padding: 0;
+    z-index: 1;
+} */
 
 #hero {
     align-items: center;
     background-attachment: fixed;
     background-image: url(../imgs/hero-scaled.png);
-    background-position: 0 67%;
+    background-position: top center;
     background-size: cover;
     display: flex;
     flex-shrink: 0;
     height: 100vh;
     justify-content: space-around;
     margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: 0;
 }
 
 #hero article {
@@ -246,11 +289,12 @@ main {
     font-size: 2rem;
     height: auto;
     line-height: 0.1;
-    margin-left: -1300px;
-    margin-top: -40vh;
-    position: absolute;
+    position: relative;
     text-align: center;
     width: auto;
+    left: -32%;
+    top: -12%;
+    z-index: 1;
 }
 
 #hero h1 {
@@ -313,14 +357,18 @@ main {
 }
 
 footer {
+    display: flex;
     align-items: center;
     border: 2px white solid;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    flex-direction: row;
+    justify-content: space-between;
     margin-top: 2em;
     min-height: 20vh;
-    padding: 1rem 0;
+    max-width: 100vw;
+    padding: 1rem 2rem;
     text-align: center;
 }
 
@@ -380,7 +428,10 @@ footer {
 .row.halves>img {
     width: 48%;
     height: 20%;
-    margin-top: 17vh;
+}
+
+#menu-button {
+    z-index: 300;
 }
 
 .side-menu {
@@ -399,7 +450,7 @@ footer {
     top: 0;
     transition: 0.2s;
     width: 0;
-    z-index: 1;
+    z-index: 100;
 }
 
 .side-menu a {
@@ -434,7 +485,7 @@ footer a {
     color: white;
 }
 
-.movethistotheleft {
+/* .movethistotheleft {
     font-size: 36px;
     margin-left: -190vh;
 }
@@ -447,13 +498,13 @@ footer a {
 
 .movethisup {
     margin-top: -90px;
-}
+} */
 
 #hpimage {
     align-items: center;
     background-attachment: fixed;
     background-image: url(../imgs/nemesis-orange.png);
-    background-position: 0 67%;
+    background-position: 0 10%;
     background-size: cover;
     display: flex;
     flex-shrink: 0;
@@ -478,46 +529,42 @@ footer a {
 
 
 #privacy {
-    margin: 0 auto;
+    margin: 0;
 }
 
-
-#footer-left {
+#footer-layout {
     display: flex;
     flex-direction: row;
     font-family: "Goldman";
     font-size: 28px;
-    justify-content: center;
-    margin-left: -177vh;
-    position: absolute;
-    text-align: center;
+    align-items: center;
+    gap: 1rem;
 }
 
-#footer-left img {
-    width: 90px;
+#footer-layout img {
+    width: 4rem;
 }
 
 #social {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-right: -177vh;
-    position: absolute;
+    gap: 1rem;
+    align-items: center;
 }
 
-div.vertical-line {
+/* div.vertical-line {
     background-color: rgb(255, 255, 255);
     float: left;
     margin-left: 103vh;
     margin-top: -60px;
     transform: rotate(30deg);
     width: 3px;
-}
+} */
 
-.thenemesistitle {
+/* .thenemesistitle {
     margin-left: 40vh;
     margin-top: 20vh;
-}
+} */
 
 #nemesishero {
     background-image: url(../imgs/nemesis.jpg);
