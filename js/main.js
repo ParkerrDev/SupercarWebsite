@@ -37,8 +37,8 @@ closeMenuButton.addEventListener('click', () => {
 
 
 window.onload = function () {
-    marginBottom = getScrollbarThumbHeigth();
-    offset = marginBottom;
-    marginBottom = ('-' + offset.toFixed(2) + 'px');
-    injectCSS('::-webkit-scrollbar-track-piece:end { margin-bottom: ' + marginBottom + '};');
+    // marginBottom = getScrollbarThumbHeigth();
+    // offset = marginBottom;
+    // marginBottom = ('-' + offset.toFixed(2) + 'px');
+    // injectCSS('::-webkit-scrollbar-track-piece:end { margin-bottom: ' + marginBottom + '};');
 }

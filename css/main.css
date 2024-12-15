@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+
+/* Car and Road Scrollbar */
 /* ::-webkit-scrollbar:vertical {
     background-clip: content-box;
     background-image: url(../svg/road.svg);
@@ -31,6 +33,24 @@
 ::-webkit-scrollbar-track-piece:vertical:end {
     background: transparent;
 } */
+
+
+/* Elegant Scrollbar */
+::-webkit-scrollbar {
+    width: 0.5vw;
+    background: black;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-track-piece {
+    margin: 0;
+    background-color: black;
+}
 
 * {
     box-sizing: border-box;
@@ -751,10 +771,10 @@ footer a {
     #hero {
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: 10%;
+        background-position-x: 10%;
         background-position-y: 50%;
         height: 100vh;
-        width: 100%;
+        width: 100vw;
     }
 
     #hero h1 {
