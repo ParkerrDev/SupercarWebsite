@@ -35,7 +35,6 @@ closeMenuButton.addEventListener('click', () => {
     sideMenu.classList.toggle('open');
 });
 
-
 window.onload = function () {
     // marginBottom = getScrollbarThumbHeigth();
     // offset = marginBottom;
