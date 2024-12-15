@@ -727,7 +727,9 @@ footer a {
 
     #hero {
         background-repeat: no-repeat;
-        background-size: cover;
+        background-size: 200vh;
+        background-position-y: 50%;
+        background-position-x: 10%;
     }
 
     #hero h1 {
@@ -736,7 +738,7 @@ footer a {
 
     #hero article {
         left: 0;
-        top: 0;
+        top: -10vh;
         line-height: 2rem;
     }
 
