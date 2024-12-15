@@ -1,5 +1,6 @@
 const menuButton = document.getElementById('menu-button');
 const sideMenu = document.getElementById('side-menu');
+const closeMenuButton = document.getElementById('close-menu-button');
 
 window.onscroll = function () { scrollFunction() };
 
@@ -29,6 +30,11 @@ const injectCSS = css => {
 menuButton.addEventListener('click', () => {
     sideMenu.classList.toggle('open');
 });
+
+closeMenuButton.addEventListener('click', () => {
+    sideMenu.classList.toggle('open');
+});
+
 
 window.onload = function () {
     marginBottom = getScrollbarThumbHeigth();

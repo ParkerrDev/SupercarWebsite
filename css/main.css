@@ -184,6 +184,7 @@ header nav ul li a:hover {
 header nav ul li svg:hover {
     opacity: 0.5;
     transition: all .2s;
+    cursor: pointer;
 }
 
 body:not(#home) #hero {
@@ -536,6 +537,21 @@ footer {
     width: 450px;
 }
 
+.side-menu #close-menu-button {
+    position: relative;
+    top: -28vh;
+    left: -10vw;
+    cursor: pointer;
+}
+
+.side-menu.open #close-menu-button svg {
+    fill: black;
+}
+
+.side-menu.open #close-menu-button svg {
+    fill: white;
+}
+
 .side-menu.open a {
     color: white;
 }
@@ -660,6 +676,8 @@ footer a {
     display: none;
 }
 
+
+
 @media screen and (max-width: 768px) {
     header nav {
         position: relative;
@@ -724,6 +742,11 @@ footer a {
         width: 3rem;
         height: 3rem;
     }
+
+    /* .card {
+        width: 100%;
+        flex:1 1 100%;
+    } */
 
     #hero {
         background-repeat: no-repeat;
