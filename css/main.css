@@ -539,8 +539,8 @@ footer {
 
 #close-menu-button {
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 4vh;
+    left: 2vw;
     cursor: pointer;
 }
 
@@ -750,9 +750,10 @@ footer a {
 
     #hero {
         background-repeat: no-repeat;
-        background-size: 100vh;
-        background-position-y: 50%;
-        background-position-x: 10%;
+        background-size: cover;
+        background-position: 10%;
+        height: 100vh;
+        width: 100%;
     }
 
     #hero h1 {
