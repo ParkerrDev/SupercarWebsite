@@ -752,6 +752,7 @@ footer a {
         background-repeat: no-repeat;
         background-size: cover;
         background-position: 10%;
+        background-position-y: 50%;
         height: 100vh;
         width: 100%;
     }
