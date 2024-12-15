@@ -537,10 +537,10 @@ footer {
     width: 450px;
 }
 
-.side-menu #close-menu-button {
-    position: relative;
-    top: -28vh;
-    left: -10vw;
+#close-menu-button {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
     cursor: pointer;
 }
 
