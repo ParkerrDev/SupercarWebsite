@@ -28,17 +28,17 @@
                         </g>
                     </svg>
                 </li>
-                <li><a href="/">Home</a></li>
-                <li><a href="events.html">Events</a></li>
+                <li class="main-nav"><a href="/">Home</a></li>
+                <li class="main-nav"><a href="events.html">Events</a></li>
                 <li>
-                    <div id="image-container"><img src="imgs/logo.png" alt="Trion Logo"></div>
+                    <img id="logo" src="imgs/logo.png" alt="Trion Logo">
                 </li>
-                <li><a href="about-us.html">About Us</a></li>
-                <li><a href="shop.html">Shop</a></li>
+                <li class="main-nav"><a href="about-us.html">About Us</a></li>
+                <li class="main-nav"><a href="shop.html">Shop</a></li>
 
                 <li id="cart-and-search"><svg width="44" height="42" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
                         width="37" height="37" viewBox="0,0,256,256">
-                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="4" stroke-linecap="butt"
                             stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
                             font-family="none" font-weight="none" font-size="none" text-anchor="none"
                             style="mix-blend-mode: normal">
@@ -62,43 +62,31 @@
     </header>
 
     <div id="side-menu" class="side-menu">
+        <svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g clip-path="url(#clip0_551_410)">
+                <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </g>
+            <defs>
+                <clipPath id="clip0_551_410">
+                    <rect width="47" height="47" fill="black" transform="matrix(0 1 -1 0 47.375 0)" />
+                </clipPath>
+            </defs>
+        </svg>
+        <div id="mobile-primary-navigation">
+            <a href="/">Home</a>
+            <a href="events.html">Events</a>
+            <a href="about-us.html">About Us</a>
+            <a href="shop.html">Shop</a>
+        </div>
         <a href="nemesis.html">The Nemesis</a>
         <a class="active" href="black-widow.html">Black Widow</a>
         <a href="contact-us.html">Contact Us</a>
         <a href="account.html">Account</a>
     </div>
-
-    <figure id="hero" class="backdrop-blur">
-        <article class="backdrop-blur">
-            <h1>Trion</h1>
-            <p>Built For Performance</p>
-        </article>
-    </figure>
-
     <main>
-        <div id="diagnol-row">
-            <img src="imgs/nemesis-back.png" alt="Nemesis Back">
-            <article>
-                <p>Trion Supercar designs its vehicles with a focus on aligning each model with user preferences and
-                    real-world needs. From the initial concept to the final testing stages, the company integrates insights
-                    that shape design choices, technological features, and performance capabilities. This approach allows
-                    Trion to stay ahead of market trends by continuously adapting to evolving demands.</p>
-                <p>By incorporating these insights into the prototyping and testing phases, Trion produces supercars that
-                    are both innovative and practical, offering cutting-edge performance while meeting everyday challenges.
-                    The result is a collection of high-performance vehicles engineered for excellence in the most demanding
-                    conditions, reflecting the company's commitment to precision and innovation.</p>
-            </article>
-        </div>
 
-        <figure id="hpimage"></figure>
-
-        <h3 class="header center">Explore Our Models</h3>
-
-
-        <div class="row halves card">
-            <img src="imgs/blackwidow.png" alt="black widow">
-            <img src="imgs/nemesis-savani.png" alt="nemesis">
-        </div>
     </main>
     <footer>
         <div id="footer-layout">

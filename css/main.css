@@ -408,18 +408,7 @@ body:not(#home) main {
     text-shadow: 0px 10px 33.5px #000;
 }
 
-.button {
-    background-color: black;
-    border-radius: 0.33em;
-    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
-    color: white;
-    display: inline-block;
-    font-size: 1.5rem;
-    margin-left: 10px;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    transition: color ease 200ms, background ease 200ms;
-}
+
 
 .article p {
     font-weight: lighter;
@@ -510,9 +499,9 @@ footer {
     border-radius: 1rem;
 }
 
-.row.halves>img {
-    width: 48%;
-    height: 20%;
+.image-container img {
+    background-color: black;
+    border-radius: 0.33em;
 }
 
 #menu-button {
@@ -556,6 +545,8 @@ footer {
     color: white;
     width: 450px;
 }
+
+
 
 #close-menu-button {
     position: absolute;
@@ -696,7 +687,63 @@ footer a {
     display: none;
 }
 
+.image-container {
+    position: relative;
+    width: 48%;
+    padding: 0;
+    margin: 0;
+}
 
+.button-container {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+    padding: 0 20px;
+}
+
+.car-button {
+    border: 1px solid white;
+    font-family: "Days One", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    background-color: black;
+    border-radius: 0.33em;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
+    color: white;
+    display: inline-block;
+    font-size: 1rem;
+    margin-left: 10px;
+    padding: 0.25em 3em;
+    text-decoration: none;
+    transition: color ease 200ms, background ease 200ms;
+}
+
+.car-button:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.05);
+}
+
+@media screen and (max-width: 768px) {
+    .image-container {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .button-container {
+        bottom: 50%;
+    }
+    
+    .car-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     header nav {
@@ -712,6 +759,7 @@ footer a {
         padding: 1rem 0.5rem;
         position: relative;
         margin-top: 8vh;
+        height: 8vh;
     }
 
     header nav.opaque {
@@ -720,7 +768,7 @@ footer a {
         border: none;
         box-shadow: 0 .25rem .5rem rgba(255, 255, 255, 0.1);
         margin: 0;
-        max-height: 8vh;
+        height: 8vh;
         opacity: 1;
         transition: all ease 200ms;
 
@@ -754,9 +802,9 @@ footer a {
         z-index: 301;
     }
 
-    header nav ul li #logo {
+    /* header nav ul li #logo {
         height: 8vh;
-    }
+    } */
 
     header nav ul li svg {
         width: 3rem;
@@ -860,3 +908,4 @@ footer a {
         padding: 10px 25px;
     }
 }
+
