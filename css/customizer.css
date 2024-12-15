@@ -6,7 +6,7 @@
   text-align: center;
   font-size: 18px;
   letter-spacing: 1px;
-  color: #155FFF;
+  color: #000000;
   position: relative;
   padding-right: 120px;
   position: relative;
@@ -37,7 +37,7 @@
 }
 .switch-button-checkbox:checked + .switch-button-label:before {
   transform: translateX(120px);
-  transition: transform 300ms linear;
+  transition: transform 200ms linear;
 }
 .switch-button-checkbox + .switch-button-label {
   position: relative;

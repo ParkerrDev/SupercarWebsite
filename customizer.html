@@ -14,101 +14,185 @@
 </head>
 
 <body id="customizer">
-    <a href="nemesis.html"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
-            xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0_551_410)">
-                <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
-                    stroke-linejoin="round" />
-            </g>
-            <defs>
-                <clipPath id="clip0_551_410">
-                    <rect width="47" height="47" fill="black" transform="matrix(0 1 -1 0 47.375 0)" />
-                </clipPath>
-            </defs>
-        </svg></a>
+    <div class="customizer-container">
+        <h1 id="customizer-title">Customizer</h1>
+        
+        <div class="customizer-content">
+            <a href="nemesis.html"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_551_410)">
+                        <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
+                            stroke-linejoin="round" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_551_410">
+                            <rect width="47" height="47" fill="black" transform="matrix(0 1 -1 0 47.375 0)" />
+                        </clipPath>
+                    </defs>
+                </svg></a>
 
-    <ul class="expandable-list">
-        <h3>Models</h3>
-        <li class="list-item">
-            <div class="item-header">The Nemesis</div>
-            <ul class="sub-list">
+            <ul class="expandable-list">
+                <h3>Models</h3>
                 <li class="list-item">
-                    <div class="item-header">Interior</div>
+                    <div class="item-header">The Nemesis</div>
                     <ul class="sub-list">
-                        <li>Upholstery</li>
-                        <li>Steering Wheel</li>
+                        <li class="list-item">
+                            <div class="item-header">Interior</div>
+                            <ul class="sub-list">
+                                <li>Upholstery</li>
+                                <li>Steering Wheel</li>
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <div class="item-header">Exterior</div>
+                            <ul class="sub-list">
+                                <li>Paint</li>
+                                <li>Wheels</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
+
                 <li class="list-item">
-                    <div class="item-header">Exterior</div>
+                    <div class="item-header">Black Widow</div>
                     <ul class="sub-list">
-                        <li>Paint</li>
-                        <li>Wheels</li>
+                        <li class="list-item">
+                            <div class="item-header">Interior</div>
+                            <ul class="sub-list">
+                                <li>Upholstery</li>
+                                <li>Steering Wheel</li>
+                            </ul>
+                        </li>
+                        <li class="list-item">
+                            <div class="item-header">Exterior</div>
+                            <ul class="sub-list">
+                                <li>Paint</li>
+                                <li>Wheels</li>
+                            </ul>
+                        </li>
                     </ul>
                 </li>
+
             </ul>
-        </li>
 
-        <li class="list-item">
-            <div class="item-header">Black Widow</div>
-            <ul class="sub-list">
-                <li class="list-item">
-                    <div class="item-header">Interior</div>
-                    <ul class="sub-list">
-                        <li>Upholstery</li>
-                        <li>Steering Wheel</li>
-                    </ul>
-                </li>
-                <li class="list-item">
-                    <div class="item-header">Exterior</div>
-                    <ul class="sub-list">
-                        <li>Paint</li>
-                        <li>Wheels</li>
-                    </ul>
-                </li>
-            </ul>
-        </li>
+            <div id="customization-panel">
+                <h2>The Nemesis</h2>
+                <!-- Wrap form and preview in a new container -->
+                <div class="customization-content">
+                    <form id="customization-form">
+                        <h3>Upholstery</h3>
+                        <div class="option-group">
+                            <h4>Color</h4>
+                            <div class="color-options">
+                                <input type="radio" id="white" name="color" value="white">
+                                <label for="white" class="color-swatch white"></label>
 
-    </ul>
+                                <input type="radio" id="brown" name="color" value="brown">
+                                <label for="brown" class="color-swatch brown"></label>
 
-    <div id="customization-panel">
-        <h3>The Nemesis</h3>
-        <form id="customization-form">
-            <div class="option-group">
-                <h4>Color</h4>
-                <div class="color-options">
-                    <input type="radio" id="white" name="color" value="white">
-                    <label for="white" class="color-swatch white"></label>
+                                <input type="radio" id="black" name="color" value="black">
+                                <label for="black" class="color-swatch black"></label>
+                            </div>
+                        </div>
 
-                    <input type="radio" id="brown" name="color" value="brown">
-                    <label for="brown" class="color-swatch brown"></label>
+                        <div class="option-group">
+                            <h4>Material</h4>
+                            <div class="material-options">
+                                <input type="radio" id="leather" name="material" value="leather">
+                                <label for="leather" class="material-option">Leather</label>
 
-                    <input type="radio" id="black" name="color" value="black">
-                    <label for="black" class="color-swatch black"></label>
+                                <input type="radio" id="nylon" name="material" value="nylon">
+                                <label for="nylon" class="material-option">Nylon</label>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="car-preview">
+                        <h3>Preview</h3>
+                        <img src="imgs/nemesis-interior-1.5k.jpg" class="preview-image">
+                        <div class="switch-button">
+                            <input class="switch-button-checkbox" type="checkbox">
+                            <label class="switch-button-label" for=""><span class="switch-button-label-span">Interior</span></label>
+                        </div>
+                    </div>
                 </div>
+                <button type="submit">Save Configuration</button>
             </div>
-
-            <div class="option-group">
-                <h4>Type</h4>
-                <div class="radio-group">
-                    <input type="radio" id="leather" name="material" value="leather">
-                    <label for="leather">Leather</label>
-
-                    <input type="radio" id="nylon" name="material" value="nylon">
-                    <label for="nylon">Nylon</label>
-                </div>
-            </div>
-
-            <div class="switch-button">
-                <input class="switch-button-checkbox" type="checkbox"></input>
-                <label class="switch-button-label" for=""><span class="switch-button-label-span">Interior</span></label>
-            </div>
-
-            <button type="submit">Save Configuration</button>
-        </form>
+        </div>
     </div>
 
     <style>
+
+        .list-item .sub-list .list-item .sub-list {
+            padding: 1rem;
+        }
+
+        .switch-button {
+            display: flex;
+            justify-content: center;
+            justify-self: center;
+            align-items: center;
+            align-self: center;
+        }
+
+
+        .sub-list {
+            padding: 1rem;
+        } 
+        .sub-list .selected {
+            background: rgba(255, 255, 255, 0.114);
+        }
+
+        #preview-panel {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #car-preview {
+            max-width: 50%;
+            height: auto;
+            border-radius: 1rem;
+        }
+
+
+        .expandable-list {
+            list-style: none;
+            padding: 20px;
+            color: white;
+        }
+
+        .item-header {
+            cursor: pointer;
+            padding: 10px;
+            font-size: 1.2em;
+        }
+
+        .sub-list {
+            display: none;
+            padding-left: 20px;
+        }
+
+        .item-header:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+
+    <style>
+        /* Add initial state for customization panel */
+
+        
+
+        #customization-form {
+            border: 1px solid white;
+            border-radius: 2rem;
+        }
+
+
+        #customization-panel {
+            display: none;
+        }
+
         .expandable-list {
             list-style: none;
             padding: 20px;
@@ -137,7 +221,7 @@
                 e.stopPropagation();
                 const listItem = header.closest('.list-item');
                 const isTopLevel = listItem.parentElement.classList.contains('expandable-list');
-                
+
                 // Handle top-level items
                 if (isTopLevel) {
                     // Close other top-level items
@@ -153,19 +237,23 @@
                             }
                         }
                     });
-                    
+
                     // Toggle current item
                     listItem.classList.toggle('active');
                     const customizationPanel = document.getElementById('customization-panel');
                     if (listItem.classList.contains('active')) {
                         customizationPanel.style.display = 'block';
-                        header.classList.add('expanded');
+                        header.classList.remove('expanded');
+                        // Update panel title with top-level item name
+                        document.querySelector('#customization-panel h2').textContent = header.textContent;
+                        // Hide the form when top-level item is clicked
+                        document.getElementById('customization-form').style.display = 'none';
                     } else {
                         customizationPanel.style.display = 'none';
-                        header.classList.remove('expanded');
+                        header.classList.add('expanded');
                     }
                 }
-                
+
                 // Handle sub-items
                 const subList = header.nextElementSibling;
                 if (subList) {
@@ -174,6 +262,125 @@
                     subList.style.display = subList.classList.contains('expanded') ? 'block' : 'none';
                 }
             });
+        });
+
+        // Add click handlers for lowest level items
+        document.querySelectorAll('.sub-list li:not(.list-item)').forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove selected class from all items
+                document.querySelectorAll('.sub-list li').forEach(i => {
+                    i.classList.remove('selected');
+                });
+                
+                // Add selected class to clicked item
+                item.classList.add('selected');
+                
+                // Update customization panel title to reflect selection
+                const parentHeader = item.closest('.list-item').querySelector('.item-header').textContent;
+                const itemType = item.textContent;
+                document.querySelector('#customization-panel h3').textContent = 
+                    `${parentHeader} - ${itemType}`;
+                
+                // Show the form when a low-level item is clicked
+                document.getElementById('customization-form').style.display = 'block';
+            });
+        });
+
+        // Initially hide the customization form
+        document.getElementById('customization-form').style.display = 'none';
+    </script>
+
+    <script>
+        // Define form content for each low-level item
+        const formTemplates = {
+            'Upholstery': `
+                <h3>Upholstery</h3>
+                <div class="option-group">
+                    <h4>Color</h4>
+                    <div class="color-options">
+                        <!-- Color options -->
+                        <input type="radio" id="upholstery-white" name="upholstery-color" value="white">
+                        <label for="upholstery-white" class="color-swatch white"></label>
+
+                        <input type="radio" id="upholstery-brown" name="upholstery-color" value="brown">
+                        <label for="upholstery-brown" class="color-swatch brown"></label>
+
+                        <input type="radio" id="upholstery-black" name="upholstery-color" value="black">
+                        <label for="upholstery-black" class="color-swatch black"></label>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h4>Material</h4>
+                    <div class="material-options">
+                        <!-- Material options -->
+                        <input type="radio" id="upholstery-leather" name="upholstery-material" value="leather">
+                        <label for="upholstery-leather" class="material-option">Leather</label>
+
+                        <input type="radio" id="upholstery-nylon" name="upholstery-material" value="nylon">
+                        <label for="upholstery-nylon" class="material-option">Nylon</label>
+                    </div>
+                </div>
+            `,
+            'Steering Wheel': `
+                <h3>Steering Wheel</h3>
+                <div class="option-group">
+                    <h4>Material</h4>
+                    <div class="material-options">
+                        <!-- Material options -->
+                        <input type="radio" id="steering-leather" name="steering-material" value="leather">
+                        <label for="steering-leather" class="material-option">Leather</label>
+
+                        <input type="radio" id="steering-wood" name="steering-material" value="wood">
+                        <label for="steering-wood" class="material-option">Wood</label>
+                    </div>
+                </div>
+                <div class="option-group">
+                    <h4>Color</h4>
+                    <div class="color-options">
+                        <!-- Color options -->
+                        <input type="radio" id="steering-black" name="steering-color" value="black">
+                        <label for="steering-black" class="color-swatch black"></label>
+
+                        <input type="radio" id="steering-brown" name="steering-color" value="brown">
+                        <label for="steering-brown" class="color-swatch brown"></label>
+                    </div>
+                </div>
+            `,
+            // ...Add templates for other items...
+        };
+
+        // Object to store selected options
+        const selectedOptions = {};
+
+        document.querySelectorAll('.sub-list li:not(.list-item)').forEach(item => {
+            item.addEventListener('click', () => {
+                // ...existing code to handle selection...
+
+                // Load corresponding form content
+                const itemType = item.textContent.trim();
+                const form = document.getElementById('customization-form');
+                form.innerHTML = formTemplates[itemType] || '<p>No options available for this item.</p>';
+
+                // Show the form
+                form.style.display = 'block';
+
+                // Add event listeners to form inputs to update selectedOptions
+                form.querySelectorAll('input').forEach(input => {
+                    input.addEventListener('change', () => {
+                        const model = document.querySelector('#customization-panel h2').textContent.trim();
+                        if (!selectedOptions[model]) selectedOptions[model] = {};
+                        if (!selectedOptions[model][itemType]) selectedOptions[model][itemType] = {};
+                        selectedOptions[model][itemType][input.name] = input.value;
+                    });
+                });
+            });
+        });
+
+        // Handle form submission
+        document.querySelector('#customization-panel button[type="submit"]').addEventListener('click', (e) => {
+            e.preventDefault();
+            console.log('Selected Options:', selectedOptions);
+            // ...code to handle form data...
         });
     </script>
 

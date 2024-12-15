@@ -69,7 +69,7 @@ body {
 }
 
 body#customizer {
-    max-height: 100vh;
+    max-height: 99vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -79,16 +79,78 @@ body#customizer {
     padding: 2rem;
 }
 
-/* Remove or comment out any #options-panel and #customizer-content styles as they're no longer needed */
+.customizer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+#customizer-title {
+    font-family: "Goldman", sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.customizer-content {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+body#customizer h3 {
+    font-family: "Goldman";
+}
+
+body#customizer .expandable-list h3 {
+    font-family: "Goldman";
+    justify-self: flex-start;
+    font-size: 36px;
+}
+
+body#customizer h2 {
+    font-family: "Goldman";
+}
 
 #customization-panel {
     background: black;
     padding: 2rem;
     border-radius: 2rem;
     color: white;
-    width: 25%;
-    height: 48vw;
+    min-width: 25%;
+    max-width: 55%;
+    /* height: 48vh; */
+    height: 85vh;
     margin: 0;
+}
+
+#customization-panel .customization-content {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+#customization-form {
+    flex: 1;
+}
+
+.car-preview {
+    flex: 1;
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+
+.preview-image {
+    width: 100%;
+    height: auto;
+    max-height: 45vh;
+    border-radius: 1rem;
 }
 
 #preview-panel {
@@ -118,7 +180,6 @@ body#customizer {
     justify-self: center;
     gap: 1rem;
 }
-
 
 .color-swatch {
     width: 40px;
@@ -171,7 +232,7 @@ button[type="submit"]:hover {
     background-color: black;
     border-radius: 2rem;
     width: 25%;
-    height: 48vw;
+    height: 85vh;
     margin: 0;
     list-style: none;  /* Add this */
 }
@@ -185,9 +246,17 @@ button[type="submit"]:hover {
     list-style-type: none;  /* Add this */
 }
 
-.expandable-list h3, h4 {
+#customization-panel h3{
+    font-family: "Goldman";
+    font-size: 40px;
+    padding: 1rem;
+}
+
+#customization-panel h4 {
     font-family: "Goldman";
     align-items: flex-start;
+    font-size: 32px;
+    padding: 1rem;
 }
 
 .item-header {
@@ -228,9 +297,36 @@ button[type="submit"]:hover {
     animation: slideDown 0.3s ease-out;
 }
 
+.sub-list li {
+    list-style: none;
+    padding: 5px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.sub-list li:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.sub-list li.selected {
+    background-color: rgba(255, 255, 255, 0.2);
+    position: relative;
+}
+
+.sub-list li.selected::before {
+    content: '';
+    position: absolute;
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 4px;
+    height: 100%;
+    background-color: white;
+}
+
 @keyframes slideDown {
     from {
-        opacity: 0;
+        opacity: 0; header.classList.toggle('expanded');
         transform: translateY(-10px);
     }
     to {
@@ -894,7 +990,6 @@ footer a {
     font-family: "Days One", sans-serif;
     text-transform: uppercase;
     letter-spacing: 1px;
-
     background-color: black;
     border-radius: 0.33em;
     box-shadow: 0 3px 5px rgba(0, 0, 0, 0.33);
@@ -905,6 +1000,8 @@ footer a {
     padding: 0.25em 3em;
     text-decoration: none;
     transition: color ease 200ms, background ease 200ms;
+    text-align: center;
+    min-width: 12vw;
 }
 
 .car-button:hover {
@@ -1092,3 +1189,34 @@ footer a {
         padding: 10px 25px;
     }
 }
+
+/* ...existing code... */
+.material-options {
+    display: flex;
+    justify-self: center;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.material-option {
+    padding: 0.5rem 1rem;
+    border: 2px solid white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.material-option:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"]:checked + .material-option {
+    background-color: white;
+    color: black;
+    border-color: white;
+}
+/* ...existing code... */
