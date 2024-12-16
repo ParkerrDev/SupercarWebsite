@@ -350,14 +350,6 @@ h6 {
     font-size: 2rem;
     margin-bottom: 0.5em;
     margin-top: 0;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6.center {
     color: #FFF;
     display: flex;
     flex-direction: column;
@@ -366,6 +358,13 @@ h6.center {
     font-size: 48px;
     font-style: normal;
     font-weight: 400;
+    justify-content: center;
+    line-height: normal;
+    text-align: center;
+}
+
+
+h3.center {
     justify-content: center;
     line-height: normal;
     text-align: center;
