@@ -68,6 +68,16 @@ body {
     margin: 0;
 }
 
+body#login {
+    max-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* padding: rem; */
+}
+
 body#configurator {
     max-height: 99vh;
     display: flex;
@@ -983,6 +993,18 @@ footer a {
     left: 0;
 }
 
+/* .continue-btn {
+    display: flex;
+    justify-self: center;
+    color: white;
+    background-color: red;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+    font-family: "Goldman", sans-serif;
+    text-align: center;
+} */
+
 .image-heading.right {
     top: 0;
     right: 0;
@@ -1293,7 +1315,6 @@ input[type="radio"]:checked + .material-option {
     filter: grayscale(100%);
     background-position-y: 100%;
     background-position-x: 50%;
-    filter: grayscale(100%);
     margin-top: 0;
 }
 
@@ -1316,10 +1337,9 @@ input[type="radio"]:checked + .material-option {
     height: 30vh;
     margin: 0;
     margin-top: 20vh;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     background-position-y: 100%;
     background-position-x: 50%;
-    filter: grayscale(100%);
     margin-top: 0;
 }
 
@@ -1345,7 +1365,6 @@ input[type="radio"]:checked + .material-option {
     filter: grayscale(100%);
     background-position-y: 100%;
     background-position-x: 50%;
-    filter: grayscale(100%);
     margin-top: 0;
 }
 
@@ -1491,4 +1510,196 @@ input[type="radio"]:checked + .material-option {
     .product-card img {
         height: 150px;
     }
+}
+
+
+
+/* ACCOUNT PAGE */
+.vertical-menu {
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    max-width: 15vw;
+    text-align: center;
+}
+
+.vertical-menu img {
+    width: 12vh;
+    align-self: center;
+    margin-top: 50%;
+    margin-bottom: 40px;
+}
+
+.vertical-menu a {
+    font-family: "Goldman", sans-serif;
+    font-size: 24px;
+    color: white;
+    text-decoration: none;
+}
+
+.background-image {
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 80%;
+    overflow: hidden;
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* SHOP PAGE */
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: "Days One", sans-serif;
+}
+
+.title-wrapper {
+    text-align: center;
+    font-family: "Goldman", sans-serif;
+}
+
+
+.title-wrapper h1 {
+    text-align: center;
+    font-family: "Goldman", sans-serif;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    max-width: 400px;
+}
+
+.input-wrapper {
+    width: 100%;
+}
+
+.email-input {
+    width: 100%;
+    padding: 15px;
+    font-size: 16px;
+}
+
+.continue-btn {
+    width: 100%;
+    padding: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    background-color: red;
+    color: white;
+    font-family: "Goldman", sans-serif;
+    border-radius: 0.5rem;
+    border: 1px solid white;
+}
+
+.other-page {
+    text-align: center;
+}
+
+.floating-logo {
+    position: absolute;
+    display: block;
+    margin: 0 auto;
+    margin-top: 2vh;
+    height: 8vh;
+    top: 0;
+}
+
+#login footer {
+    border: none;
+}
+
+
+/* CONFIGURTOR PAGE */
+
+.list-item .sub-list .list-item .sub-list {
+    padding: 1rem;
+}
+
+.switch-button {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+}
+
+.sub-list {
+    padding: 1rem;
+    display: none;
+    padding-left: 20px;
+} 
+.sub-list .selected {
+    background: rgba(255, 255, 255, 0.114);
+}
+
+#preview-panel {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#car-preview {
+    max-width: 50%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+
+.expandable-list {
+    list-style: none;
+    padding: 20px;
+    color: white;
+}
+
+.item-header {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.item-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#customization-form {
+    border: 1px solid white;
+    border-radius: 2rem;
+}
+
+#customization-panel {
+    display: none;
+}
+
+.expandable-list {
+    list-style: none;
+    padding: 20px;
+    color: white;
+}
+
+.item-header {
+    cursor: pointer;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.item-header:hover {
+    background-color: rgba(255, 255, 255, 0.1);
 }
