@@ -700,13 +700,16 @@ body:not(#home):not(#configurator):not(#shop) main {
     width: 48%;
 }
 
-.halves  img {
+.split article {
     width: 48%;
 }
 
-.split article {
-    padding: 0vh;
-    width: 50%;
+.split p {
+    font-size: 32px;
+}
+
+.split img {
+    width: 48%;
 }
 
 .quarter article {
@@ -746,10 +749,6 @@ footer {
 
 .thirds article {
     width: 30%;
-}
-
-.halves article {
-    width: 48%;
 }
 
 .card {
