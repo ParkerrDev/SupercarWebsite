@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Days+One&family=Goldman:wght@400;700&family=Julius+Sans+One&family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-
 /* Car and Road Scrollbar */
 /* ::-webkit-scrollbar:vertical {
     background-clip: content-box;
@@ -336,7 +335,7 @@ button[type="submit"]:hover {
 
 @keyframes slideDown {
     from {
-        opacity: 0; header.classList.toggle('expanded');
+        opacity: 0;
         transform: translateY(-10px);
     }
     to {
@@ -901,16 +900,17 @@ footer a {
     background-size: cover;
     display: flex;
     flex-shrink: 0;
+    /* width: 100vw; */
     height: 100vh;
     justify-content: space-around;
     margin: 0;
-    position: relative;
-    top: 0;
+    /* position: relative;
+    top: 0; */
     width: 100%;
     z-index: -1;
-    background-position-y: 100%;
-    background-position-x: 100%;
-    background-image: url(../imgs/nemesis-upscaled.jpg);
+    /* background-position-y: 100%;
+    background-position-x: 100%; */
+    background-image: url(../imgs/blackwidow-upscaled.jpg);
 }
 
 #blackwidowhero article {
