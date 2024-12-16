@@ -894,6 +894,49 @@ footer a {
     align-items: center;
 }
 
+#blackwidowhero {
+    align-items: center;
+    background-attachment: fixed;
+    background-position: top center;
+    background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    height: 100vh;
+    justify-content: space-around;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    background-position-y: 100%;
+    background-position-x: 100%;
+    background-image: url(../imgs/nemesis-upscaled.jpg);
+}
+
+#blackwidowhero article {
+    color: white;
+    font-family: "Julius Sans One";
+    font-size: 2rem;
+    height: auto;
+    line-height: 0.1;
+    position: relative;
+    text-align: center;
+    width: auto;
+    left:0%;
+    top: -12%;
+    z-index: 1;
+}
+
+#blackwidowhero h1 {
+    color: #FFF;
+    font-family: "Julius Sans One";
+    font-size: 128px;
+    font-size: 128px;
+    font-style: normal;
+    font-weight: 400;
+    text-shadow: -2px 2px 10px #00263a;
+}
+
 #nemesishero {
     align-items: center;
     background-attachment: fixed;
