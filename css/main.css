@@ -1831,3 +1831,16 @@ body#black-widow main {
     font-size: 32px;
     padding: 5rem;
 }
+
+#blackwidowimage {
+    align-items: center;
+    background-attachment: fixed;
+    background-image: url(../imgs/blackwidow-front.jpeg);
+    background-position: 0 80%;
+    background-size: cover;
+    display: flex;
+    flex-shrink: 0;
+    height: 100vh;
+    justify-content: space-around;
+    margin: 0;
+}
