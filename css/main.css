@@ -1259,7 +1259,7 @@ input[type="radio"]:checked + .material-option {
 }
 
 #shop-hero article {
-    color: white;
+    color: black;
     font-family: "Julius Sans One";
     font-size: 2rem;
     height: auto;
@@ -1281,6 +1281,87 @@ input[type="radio"]:checked + .material-option {
     font-weight: 400;
     text-shadow: -2px 2px 10px #00263a;
 }
+
+
+#shop-hero.men {
+    background-image: url(../imgs/shop/shop-men.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    min-width: 100vw;
+    height: 30vh;
+    margin-top: 20vh;
+    filter: grayscale(100%);
+    background-position-y: 100%;
+    background-position-x: 50%;
+    filter: grayscale(100%);
+    margin-top: 0;
+}
+
+#shop-hero.men article {
+    color: black;
+    font-size: 2rem;
+    left:0%;
+    top: 20%;
+}
+
+#shop-hero.men h1 {
+    color: black;
+}
+
+#shop-hero.women {
+    background-image: url(../imgs/shop/women.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    min-width: 100vw;
+    height: 30vh;
+    margin: 0;
+    margin-top: 20vh;
+    filter: grayscale(100%);
+    background-position-y: 100%;
+    background-position-x: 50%;
+    filter: grayscale(100%);
+    margin-top: 0;
+}
+
+#shop-hero.women article {
+    color: black;
+    font-size: 2rem;
+    left:0%;
+    top: 20%;
+}
+
+#shop-hero.women h1 {
+    color: black;
+}
+
+#shop-hero.children {
+    background-image: url(../imgs/shop/children.png);
+    background-repeat: no-repeat;
+    background-size: 90%;
+    min-width: 100vw;
+    height: 30vh;
+    margin: 0;
+    margin-top: 20vh;
+    filter: grayscale(100%);
+    background-position-y: 100%;
+    background-position-x: 50%;
+    filter: grayscale(100%);
+    margin-top: 0;
+}
+
+#shop-hero.children article {
+    color: black;
+    font-size: 2rem;
+    left:0%;
+    top: 20%;
+}
+
+#shop-hero.children h1 {
+    color: black;
+}
+
+
+
 
 .product-grid {
     display: grid;
@@ -1306,10 +1387,9 @@ input[type="radio"]:checked + .material-option {
 
 .product-card img {
     width: 100%;
-    height: 10vh;
-    object-fit: cover;
-    border-radius: 5px;
-    margin-bottom: 1rem;
+    height: 30vh;
+    object-fit:contain;
+    border-radius: 0rem;
 }
 
 .product-card h3 {
@@ -1332,10 +1412,12 @@ input[type="radio"]:checked + .material-option {
     font-family: "Days One", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .product-card .add-to-cart:hover {
-    background: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    transition: all 0.3s ease;
 }
 
 .catagory-grid {
@@ -1365,7 +1447,7 @@ input[type="radio"]:checked + .material-option {
     height: 40vh;
     object-fit: cover;
     border-radius: 1rem;
-    margin-bottom: -2rem;
+    /* margin-bottom: rem; */
 }
 
 .catagory-card h3 {
@@ -1388,10 +1470,12 @@ input[type="radio"]:checked + .material-option {
     font-family: "Days One", sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    text-decoration: none;
 }
 
 .catagory-card .add-to-cart:hover {
-    background: rgba(255, 255, 255, 0.8);
+    opacity: 0.5;
+    transition: transform 0.3s ease;
 }
 
 
