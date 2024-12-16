@@ -68,7 +68,7 @@ body {
     margin: 0;
 }
 
-body#customizer {
+body#configurator {
     max-height: 99vh;
     display: flex;
     flex-direction: row;
@@ -79,7 +79,7 @@ body#customizer {
     padding: 2rem;
 }
 
-.customizer-container {
+.configurator-container {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -87,7 +87,7 @@ body#customizer {
     gap: 2rem;
 }
 
-#customizer-title {
+#configurator-title {
     font-family: "Goldman", sans-serif;
     font-size: 48px;
     color: white;
@@ -95,7 +95,7 @@ body#customizer {
     text-align: center;
 }
 
-.customizer-content {
+.configurator-content {
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -104,17 +104,17 @@ body#customizer {
     gap: 2rem;
 }
 
-body#customizer h3 {
+body#configurator h3 {
     font-family: "Goldman";
 }
 
-body#customizer .expandable-list h3 {
+body#configurator .expandable-list h3 {
     font-family: "Goldman";
     justify-self: flex-start;
     font-size: 36px;
 }
 
-body#customizer h2 {
+body#configurator h2 {
     font-family: "Goldman";
 }
 
@@ -234,16 +234,16 @@ button[type="submit"]:hover {
     width: 25%;
     height: 85vh;
     margin: 0;
-    list-style: none;  /* Add this */
+    list-style: none;
 }
 
 .expandable-list ul {
-    list-style: none;  /* Add this */
+    list-style: none;
     padding-left: 20px;
 }
 
 .expandable-list li {
-    list-style-type: none;  /* Add this */
+    list-style-type: none;
 }
 
 #customization-panel h3{
@@ -478,15 +478,7 @@ header nav ul li svg:hover {
     cursor: pointer;
 }
 
-/* body:not(#home) #hero {
-    height: 50vh;
-} */
-
-/* body:not(#home) #hero h1 {
-    font-size: 3rem;
-} */
-
-body:not(#home):not(#customizer) main {
+body:not(#home):not(#configurator) main {
     margin-top: 20vh;
 }
 
@@ -599,7 +591,7 @@ body:not(#home):not(#customizer) main {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../imgs/nemesis-side.png);
+    background-image: url(../imgs/nemesis-side-upscaled.jpg);
     transform: skewX(-20deg);
     z-index: 2;
     outline: 1px solid white;
@@ -850,7 +842,7 @@ footer a {
 #hpimage {
     align-items: center;
     background-attachment: fixed;
-    background-image: url(../imgs/nemesis-orange.png);
+    background-image: url(../imgs/nemesis-road-tilt-upscaled.png);
     background-position: 0 10%;
     background-size: cover;
     display: flex;
@@ -886,7 +878,7 @@ footer a {
 
 #nemesishero {
     align-items: center;
-    /* background-attachment: fixed; */
+    background-attachment: fixed;
     background-position: top center;
     background-size: cover;
     display: flex;
@@ -900,20 +892,21 @@ footer a {
     z-index: -1;
     background-position-y: 100%;
     background-position-x: 100%;
-    background-image: url(../imgs/nemesis.jpg);
+    background-image: url(../imgs/nemesis-upscaled.jpg);
 }
 
 #nemesishero article {
     color: white;
     font-family: "Julius Sans One";
-    font-size: 27px;
+    font-size: 2rem;
     height: auto;
     line-height: 0.1;
-    margin-left: -1300px;
-    margin-top: -40vh;
-    position: absolute;
+    position: relative;
     text-align: center;
     width: auto;
+    left:0%;
+    top: -12%;
+    z-index: 1;
 }
 
 #nemesishero h1 {
@@ -923,7 +916,7 @@ footer a {
     font-size: 128px;
     font-style: normal;
     font-weight: 400;
-    text-shadow: 0px 10px 33.5px #000;
+    text-shadow: -2px 2px 10px #00263a;
 }
 
 #nemesis-editor {
@@ -972,6 +965,25 @@ footer a {
     width: 48%;
     padding: 0;
     margin: 0;
+}
+
+.image-heading {
+    position: absolute;
+    font-family: "Julius Sans One", sans-serif;
+    color: white;
+    font-size: 40px;
+    padding: 1rem;
+    z-index: 1;
+}
+
+.image-heading.left {
+    top: 0;
+    left: 0;
+}
+
+.image-heading.right {
+    top: 0;
+    right: 0;
 }
 
 .button-container {
@@ -1129,6 +1141,14 @@ footer a {
         display: none;
     }
 
+    .button-container {
+        bottom: 0%;
+    }
+
+    #hpimage {
+        background-position: 37%;
+    }
+
     .row {
         padding: 0 1rem;
     }
@@ -1190,7 +1210,6 @@ footer a {
     }
 }
 
-/* ...existing code... */
 .material-options {
     display: flex;
     justify-self: center;
@@ -1219,4 +1238,3 @@ input[type="radio"]:checked + .material-option {
     color: black;
     border-color: white;
 }
-/* ...existing code... */

@@ -5,20 +5,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trion - Car Customizer</title>
+    <title>Trion - Car Configurator</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/customizer.css">
-    <link rel="stylesheet" href="css/customizer.css.map">
+    <link rel="stylesheet" href="css/configurator.css">
+    <link rel="stylesheet" href="css/configurator.css.map">
     <link rel="icon" href="imgs/icon.png>">
     <script async src="js/main.js"></script>
 </head>
 
-<body id="customizer">
-    <div class="customizer-container">
-        <h1 id="customizer-title">Customizer</h1>
+<body id="configurator">
+    <div class="configurator-container">
+        <h1 id="configurator-title">Configurator</h1>
         
-        <div class="customizer-content">
-            <a href="nemesis.html"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
+        <div class="configurator-content">
+            <a href="/"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <g clip-path="url(#clip0_551_410)">
                         <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
@@ -77,7 +77,6 @@
 
             <div id="customization-panel">
                 <h2>The Nemesis</h2>
-                <!-- Wrap form and preview in a new container -->
                 <div class="customization-content">
                     <form id="customization-form">
                         <h3>Upholstery</h3>
@@ -354,7 +353,6 @@
 
         document.querySelectorAll('.sub-list li:not(.list-item)').forEach(item => {
             item.addEventListener('click', () => {
-                // ...existing code to handle selection...
 
                 // Load corresponding form content
                 const itemType = item.textContent.trim();
@@ -380,7 +378,6 @@
         document.querySelector('#customization-panel button[type="submit"]').addEventListener('click', (e) => {
             e.preventDefault();
             console.log('Selected Options:', selectedOptions);
-            // ...code to handle form data...
         });
     </script>
 
