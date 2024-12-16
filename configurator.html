@@ -241,6 +241,7 @@
                     listItem.classList.toggle('active');
                     const customizationPanel = document.getElementById('customization-panel');
                     if (listItem.classList.contains('active')) {
+                        customizationPanel.classList.add('active');
                         customizationPanel.style.display = 'block';
                         header.classList.remove('expanded');
                         // Update panel title with top-level item name
@@ -248,6 +249,7 @@
                         // Hide the form when top-level item is clicked
                         document.getElementById('customization-form').style.display = 'none';
                     } else {
+                        customizationPanel.classList.remove('active');
                         customizationPanel.style.display = 'none';
                         header.classList.add('expanded');
                     }
