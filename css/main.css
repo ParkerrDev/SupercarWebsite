@@ -487,7 +487,7 @@ header nav ul li svg:hover {
     cursor: pointer;
 }
 
-body:not(#home):not(#configurator):not(#shop) main {
+body:not(#home):not(#configurator):not(#shop):not(#blackwidow):not(#nemesis) main {
     margin-top: 20vh;
 }
 
@@ -1800,6 +1800,10 @@ body#contact-us footer{
 
 /* THE NEMESIS PAGE */
 
+#nemesis main {
+    padding: 5rem;
+}
+
 #nemesisimage {
     align-items: center;
     background-attachment: fixed;
@@ -1811,4 +1815,19 @@ body#contact-us footer{
     height: 100vh;
     justify-content: space-around;
     margin: 0;
+}
+
+
+/* BLACK WIDOW PAGE */
+
+body#black-widow main {
+    margin:0;
+    margin-top: 0;
+}
+
+.full {
+    max-width: 50vw;
+    margin: 0 auto;
+    font-size: 32px;
+    padding: 5rem;
 }
