@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trion - Support</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="imgs/icon.png">
+    <script async src="js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/alpine-utils.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+<body id="support" x-data="mainData()" x-init="init">
+    <header>
+        <template x-data x-include="templates/side-menu.html"></template>
+        <template x-data x-include="templates/nav.html"></template>
+        <template x-data x-include="templates/cart.html"></template>
+    </header>
+
+    <main class="support-container">
+        <h1>Customer Support</h1>
+
+        <section class="support-grid">
+            <div class="support-card">
+                <h3>Email Support</h3>
+                <div class="center">
+  	              <p><a href="mailto:info@trionsupercars.com">info@trionsupercars.com</a></p>
+   	             <p>Response within 24 hours</p>
+                </div>
+            </div>
+            <div class="support-card">
+                <h3>Technical Support</h3>
+                <div class="center">
+			<p><a href="tel:1-888-TECH-HELP">1-888-TECH-HELP</a></p>
+			<p>Available Mon-Fri, 8AM-6PM</p>
+		</div>
+            </div>
+            <div class="support-card">
+                <h3>Visit Us</h3>
+                <div class="center">
+                <p>Trion Headquarters</p>
+                <a href="https://www.google.com/maps/place/17173+Gillette+Ave+%23+B,+Santa+Ana,+CA+92707" target="_blank">
+                	<p>17173 Gillette Ave #B</p>
+                        <p>Santa Ana, CA 92707</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <template x-data x-include="templates/footer.html"></template>
+    </footer>
+</body>
+</html>

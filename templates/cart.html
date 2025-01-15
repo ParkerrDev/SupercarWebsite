@@ -1,0 +1,102 @@
+    <!-- Cart Side Menu -->
+    <div id="cart-side-menu"
+         x-show="$store.cart.cartOpen"
+         x-transition:enter="slide-in"
+         x-transition:enter-start="translate-x-full"
+         x-transition:enter-end="translate-x-0"
+         x-transition:leave="slide-out"
+         x-transition:leave-start="translate-x-0"
+         x-transition:leave-end="translate-x-full"
+         class="cart-side-menu">
+        <div class="cart-header">
+            <h2>Your Cart</h2>
+            <button @click="$store.cart.cartOpen = false" class="close-cart">×</button>
+        </div>
+
+        <div class="cart-items" x-show="$store.cart.hasItems()">
+            <!-- Men's Items -->
+            <template x-if="$store.cart.cartItems.men.length > 0">
+                <div class="cart-category">
+                    <h3>Men's Items</h3>
+                    <template x-for="(item, index) in $store.cart.cartItems.men" :key="index">
+                        <div class="cart-item">
+                            <img :src="item.image" :alt="item.name">
+                            <div class="item-details">
+                                <h3 x-text="item.name"></h3>
+                                <p>$<span x-text="(item.price * item.quantity).toFixed(2)"></span></p>
+                                <div class="quantity-controls">
+                                    <button @click="$store.cart.updateQuantity('men', index, -1)">-</button>
+                                    <span x-text="item.quantity"></span>
+                                    <button @click="$store.cart.updateQuantity('men', index, 1)">+</button>
+                                </div>
+                            </div>
+                            <button @click="$store.cart.removeFromCart('men', index)" class="remove-item">×</button>
+                        </div>
+                    </template>
+                    <div class="category-total">
+                        <p>Men's Total: $<span x-text="$store.cart.getCategoryTotal('men')"></span></p>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Women's Items -->
+            <template x-if="$store.cart.cartItems.women.length > 0">
+                <div class="cart-category">
+                    <h3>Women's Items</h3>
+                    <template x-for="(item, index) in $store.cart.cartItems.women" :key="index">
+                        <div class="cart-item">
+                            <img :src="item.image" :alt="item.name">
+                            <div class="item-details">
+                                <h3 x-text="item.name"></h3>
+                                <p>$<span x-text="(item.price * item.quantity).toFixed(2)"></span></p>
+                                <div class="quantity-controls">
+                                    <button @click="$store.cart.updateQuantity('women', index, -1)">-</button>
+                                    <span x-text="item.quantity"></span>
+                                    <button @click="$store.cart.updateQuantity('women', index, 1)">+</button>
+                                </div>
+                            </div>
+                            <button @click="$store.cart.removeFromCart('women', index)" class="remove-item">×</button>
+                        </div>
+                    </template>
+                    <div class="category-total">
+                        <p>Women's Total: $<span x-text="$store.cart.getCategoryTotal('women')"></span></p>
+                    </div>
+                </div>
+            </template>
+
+            <!-- Children's Items -->
+            <template x-if="$store.cart.cartItems.children.length > 0">
+                <div class="cart-category">
+                    <h3>Children's Items</h3>
+                    <template x-for="(item, index) in $store.cart.cartItems.children" :key="index">
+                        <div class="cart-item">
+                            <img :src="item.image" :alt="item.name">
+                            <div class="item-details">
+                                <h3 x-text="item.name"></h3>
+                                <p>$<span x-text="(item.price * item.quantity).toFixed(2)"></span></p>
+                                <div class="quantity-controls">
+                                    <button @click="$store.cart.updateQuantity('children', index, -1)">-</button>
+                                    <span x-text="item.quantity"></span>
+                                    <button @click="$store.cart.updateQuantity('children', index, 1)">+</button>
+                                </div>
+                            </div>
+                            <button @click="$store.cart.removeFromCart('children', index)" class="remove-item">×</button>
+                        </div>
+                    </template>
+                    <div class="category-total">
+                        <p>Children's Total: $<span x-text="$store.cart.getCategoryTotal('children')"></span></p>
+                    </div>
+                </div>
+            </template>
+
+            <div class="cart-total">
+                <h3>Total: $<span x-text="$store.cart.getTotal()"></span></h3>
+                <button @click="$store.cart.clearCart()" class="clear-cart">Clear Cart</button>
+                <a href="checkout.html" class="checkout-button">Checkout</a>
+            </div>
+        </div>
+
+        <div class="empty-cart" x-show="!$store.cart.hasItems()">
+            <p>Your cart is empty</p>
+        </div>
+    </div>

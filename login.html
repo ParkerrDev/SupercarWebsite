@@ -7,46 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trion - Login</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/configurator.css">
-    <link rel="stylesheet" href="css/configurator.css.map">
-    <link rel="icon" href="imgs/icon.png>">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png">
     <script async src="js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/alpine-utils.js"></script>
+    <script src="js/nav.js"></script>
 </head>
 
-<a href="/"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_551_410)">
-            <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </g>
-        <defs>
-            <clipPath id="clip0_551_410">
-                <rect width="47" height="47" fill="black" transform="matrix(0 1 -1 0 47.375 0)" />
-            </clipPath>
-        </defs>
-    </svg></a>
-
 <body id="login">
-    <img src="imgs/logo.png" class="floating-logo" alt="Trion Logo">
-    <section class="content-wrapper">
-        <div class="title-wrapper">
-            <h1 class="title">Login</h1>
-        </div>
-        <div class="login-container">
-            <div class="input-wrapper">
-                <input class="email-input" inputmode="email" type="email" id="email-input" name="email"
-                    autocomplete="username" autocapitalize="none" spellcheck="false" required=""
-                    placeholder="Email address or phone number">
+    <header>
+        <a href="/"><img id="close-menu-button" src="svg/back-arrow.svg" alt="Go Back"></a>
+        <a href="index.html"><img class="floating-logo" src="imgs/logo.png" alt="Trion Logo"></a>
+    </header>
+
+    <main>
+        <section class="content-wrapper">
+            <div class="title-wrapper">
+                <h1 class="title">Login</h1>
             </div>
-            <button class="continue-btn">
-                Continue
-            </button>
-            <p class="other-page">
-                Don't have an account?
-                <a class="other-page-link" href="#">Sign Up</a>
-            </p>
-        </div>
-    </section>
+            <div class="login-container">
+                <div class="input-wrapper">
+                    <input class="email-input" inputmode="email" type="email" id="email-input" name="email"
+                        autocomplete="username" autocapitalize="none" spellcheck="false" required=""
+                        placeholder="Email address or phone number">
+                </div>
+                <button class="button-red continue-btn">
+                    <div class="inner"><a href="#">Continue</a></div>
+                    <div class="blob"></div>
+                    <div class="fakeblob"></div>
+                </button>
+                <p class="other-page">
+                    Don't have an account?
+                    <a class="other-page-link" href="/sign-up.html">Sign Up</a>
+                </p>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <div id="privacy">

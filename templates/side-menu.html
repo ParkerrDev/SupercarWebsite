@@ -1,0 +1,93 @@
+<div id="side-menu" class="side-menu" x-data="{
+    activeItems: new Set(),
+    get currentPage() {
+        const path = window.location.pathname;
+        return path.split('/').pop().replace('.html', '');
+    },
+    get isModelPage() {
+        const modelPages = ['nemesis', 'black-widow', 'configurator'];
+        return modelPages.includes(this.currentPage);
+    },
+    toggleItem(itemId) {
+        if (this.activeItems.has(itemId)) {
+            this.activeItems.delete(itemId);
+        } else {
+            this.activeItems.add(itemId);
+            if (itemId === 'models' && this.isModelPage) {
+                this.activeItems.add('models');
+            }
+        }
+    }
+}" x-init="isModelPage && activeItems.add('models')">
+    <img id="close-menu-button"
+         src="svg/back-arrow.svg"
+         alt="Go Back"
+         @click="$store.nav.toggle()">
+
+    <ul class="expandable-list">
+        <div id="mobile-primary-navigation">
+            <a class="active" href="/">Home</a>
+            <a href="about-us.html">About Us</a>
+            <a href="shop.html">Shop</a>
+
+            <li class="list-item"
+                :class="{
+                    'active': activeItems.has('models') || isModelPage
+                }">
+                <div class="item-header"
+                     @click="toggleItem('models')"
+                     :class="{ 'expanded': activeItems.has('models') }">Models</div>
+                <ul class="sub-list"
+                    :class="{ 'expanded': activeItems.has('models') }"
+                    x-show="activeItems.has('models')"
+                    style="display: none;">
+                    <li><a href="configurator.html#nemesis" :class="{ 'active': currentPage === 'nemesis' }">The Nemesis</a></li>
+                    <li><a href="configurator.html#blackwidow" :class="{ 'active': currentPage === 'black-widow' }">Black Widow</a></li>
+                </ul>
+            </li>
+        </div>
+
+        <li class="list-item" :class="{ 'active': activeItems.has('account') }">
+            <div class="item-header"
+                 @click="toggleItem('account')"
+                 :class="{ 'expanded': activeItems.has('account') }">Account</div>
+            <ul class="sub-list"
+                :class="{ 'expanded': activeItems.has('account') }"
+                x-show="activeItems.has('account')"
+                style="display: none;">
+                <li><a href="login.html">Login</a></li>
+                <li><a href="account.html">Account Settings</a></li>
+                <li><a href="order-history.html">Order History</a></li>
+                <li><a href="garage.html">My Garage</a></li>
+                <li><a href="logout.html">Sign Out</a></li>
+            </ul>
+        </li>
+
+        <li class="list-item" :class="{ 'active': activeItems.has('settings') }">
+            <div class="item-header"
+                 @click="toggleItem('settings')"
+                 :class="{ 'expanded': activeItems.has('settings') }">Settings</div>
+            <ul class="sub-list"
+                :class="{ 'expanded': activeItems.has('settings') }"
+                x-show="activeItems.has('settings')"
+                style="display: none;">
+                <li class="list-item" :class="{ 'active': activeItems.has('accessibility') }">
+                    <div class="item-header"
+                         @click.stop="toggleItem('accessibility')"
+                         :class="{ 'expanded': activeItems.has('accessibility') }">Accessibility</div>
+                    <!-- <ul class="sub-list"
+                        :class="{ 'expanded': activeItems.has('accessibility') }"
+                        x-show="activeItems.has('accessibility')"
+                        style="display: none;">
+                        <li>Upholstery</li>
+                        <li>Steering Wheel</li>
+                    </ul> -->
+                </li>
+            </ul>
+        </li>
+
+        <a href="contact-us.html">Contact Us</a>
+        <a href="support.html">Support</a>
+    </ul>
+</div>
+<div id="blur-overlay"></div>

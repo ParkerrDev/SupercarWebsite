@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="45" height="45"
+    viewBox="0,0,256,256">
+    <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="4" stroke-linecap="butt"
+        stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0"
+        font-family="none" font-weight="none" font-size="none" text-anchor="none"
+        style="mix-blend-mode: normal">
+        <g filter="url(#drop-shadow)" transform="scale(10.66667,10.66667)">
+            <path d="M2,5v2h20v-2zM2,11v2h20v-2zM2,17v2h20v-2z"></path>
+        </g>
+    </g>
+    <defs>
+        <filter id="drop-shadow">
+            <feDropShadow dx="1" dy="2" stdDeviation="0.75" flood-opacity="0.5"/>
+        </filter>
+    </defs>
+</svg>
+            

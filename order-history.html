@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trion - Support</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="icon" href="imgs/icon.png">
+    <script async src="js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/alpine-utils.js"></script>
+    <script src="js/nav.js"></script>
+</head>
+<body id="order-history" x-data="mainData()" x-init="init">
+    <header>
+        <template x-data x-include="templates/side-menu.html"></template>
+        <template x-data x-include="templates/nav.html"></template>
+        <template x-data x-include="templates/cart.html"></template>
+    </header>
+
+    <main class="carousel-container">
+        <h1>Order History</h1>
+
+        <section class="product-grid">
+            <div class="product-card">
+                <img src="imgs/shop/cap.png" alt="Product 1">
+                <h3>Trion Cap</h3>
+                <p class="price">$19.99</p>
+                <a @click="$store.cart.addToCart('Trion Cap', 19.99, 'imgs/shop/cap.png', 'men')" class="add-to-cart">Buy Again</a>
+            </div>
+            <div class="product-card">
+                <img src="imgs/shop/jacket.png" alt="Product 2">
+                <h3>(Womens) Trion Jacket</h3>
+                <p class="price">$89.99</p>
+                <a @click="$store.cart.addToCart('Trion Jacket', 89.99, 'imgs/shop/jacket.png', 'men')" class="add-to-cart">Buy Again</a>
+            </div>
+            <div class="product-card">
+                <img src="imgs/shop/hoodie.png" alt="Product 3">
+                <h3>(Mens) Trion Hoodie</h3>
+                <p class="price">$49.99</p>
+                <a @click="$store.cart.addToCart('Trion Hoodie', 49.99, 'imgs/shop/hoodie.png', 'men')" class="add-to-cart">Buy Again</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <template x-data x-include="templates/footer.html"></template>
+    </footer>
+</body>
+</html>

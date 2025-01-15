@@ -1,0 +1,42 @@
+<nav id="navbar" x-data="navData()" x-init="init()" :class="{ 'opaque': isOpaque }">
+    <ul id="nav-list">
+        <li id="menu-button">
+            <a href="#" @click.prevent="$store.nav.toggle()"><img src="svg/menu.svg" alt="Menu"></a>
+        </li>
+        <li class="main-nav"
+            aria-haspopup="true"
+            :class="{ 'active': isModelPage }">
+            <a href="#">Models</a>
+            <ul class="dropdown" aria-label="submenu">
+                <li><a href="nemesis.html" :class="{ 'active': currentPage === 'nemesis' }">The Nemesis</a></li>
+                <li><a href="black-widow.html" :class="{ 'active': currentPage === 'black-widow' }">Black Widow</a></li>
+            </ul>
+        </li>
+
+        <li class="main-nav"><a href="#">About Us</a>
+            <ul class="dropdown" aria-label="submenu">
+                <li><a :class="{ 'active': currentPage === 'about-us' }" href="about-us.html">Our Story</a></li>
+                <li><a :class="{ 'active': currentPage === 'events' }" href="events.html">Events</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="index.html"><img id="logo" src="imgs/logo.png" alt="Trion Logo"></a>
+        </li>
+        <li class="main-nav"><a :class="{ 'active': currentPage === 'configurator' }" href="configurator.html">Configure</a>
+            <ul class="dropdown" aria-label="submenu">
+                <li><a href="configurator.html#nemesis">The Nemesis</a></li>
+                <li><a href="configurator.html#blackwidow">Black Widow</a></li>
+            </ul>
+        </li>
+        <li class="main-nav"><a :class="{ 'active': currentPage === 'shop' }" href="shop.html">Shop</a></li>
+
+        <li id="account-and-cart">
+            <a href="login.html">
+                <img src="svg/account.svg" alt="Account">
+            </a>
+            <a href="#" @click.prevent="$store.cart.cartOpen = true">
+                <img src="svg/cart.svg" alt="Cart">
+            </a>
+        </li>
+    </ul>
+</nav>

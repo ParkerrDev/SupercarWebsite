@@ -7,25 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trion - Account</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/configurator.css">
-    <link rel="stylesheet" href="css/configurator.css.map">
-    <link rel="icon" href="imgs/icon.png>">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.png">
     <script async src="js/main.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="js/alpine-utils.js"></script>
+    <script src="js/nav.js"></script>
 </head>
 
-<body id="account">
-    <a href="/"><svg id="close-menu-button" width="48" height="47" viewBox="0 0 48 47" fill="none"
-        xmlns="http://www.w3.org/2000/svg">
-        <g clip-path="url(#clip0_551_410)">
-            <path d="M35.75 -0.25L12 23.5L35.75 47.25" stroke="white" stroke-width="4" stroke-linecap="round"
-                stroke-linejoin="round" />
-        </g>
-        <defs>
-            <clipPath id="clip0_551_410">
-                <rect width="47" height="47" fill="black" transform="matrix(0 1 -1 0 47.375 0)" />
-            </clipPath>
-        </defs>
-    </svg></a>
+
+<body id="account" x-data="mainData()" x-init="init">
+    <a href="/"><img id="close-menu-button"
+         src="svg/back-arrow.svg"
+         alt="Go Back"></a>
 
     <div class="vertical-menu">
         <img src="imgs/logo.png" alt="Trion Logo">
