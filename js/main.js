@@ -1,3 +1,23 @@
+document.addEventListener('alpine:init', () => {
+    Alpine.directive('include', (el, { expression }) => {
+        const templatePath = expression.replace(/['"]/g, ''); // Remove quotes if present
+        fetch(templatePath)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`Failed to load template: ${response.statusText}`);
+                }
+                return response.text();
+            })
+            .then(html => {
+                el.outerHTML = html;
+            })
+            .catch(error => {
+                console.error('Template loading error:', error);
+                el.outerHTML = `<div class="error">Failed to load template</div>`;
+            });
+    });
+}); 
+
 // Audio Functionality
 let hasPlayed = false;
 function playAudioOnce() {
@@ -10,21 +30,6 @@ function playAudioOnce() {
         }
     }
 }
-
-// Utility Functions
-function getScrollbarThumbHeigth() {
-    var viewportHeight = window.innerHeight;
-    var contentHeight = document.body.offsetHeight;
-    return viewportHeight * (viewportHeight / contentHeight);
-}
-
-const injectCSS = css => {
-    let el = document.createElement('style');
-    el.type = 'text/css';
-    el.innerText = css;
-    document.head.appendChild(el);
-    return el;
-};
 
 // Button Animation Function
 function initializeButtonAnimations() {
@@ -215,4 +220,91 @@ document.addEventListener('alpine:init', () => {
 
 function unfocus(event) {
     event.target.blur();
+}
+
+document.addEventListener('alpine:init', () => {
+    Alpine.store('nav', {
+        isOpen: false,
+        toggle() {
+            this.isOpen = !this.isOpen;
+            const sideMenu = document.getElementById('side-menu');
+            const blurOverlay = document.getElementById('blur-overlay');
+            const body = document.body;
+
+            if (sideMenu && blurOverlay) {
+                if (this.isOpen) {
+                    sideMenu.classList.add('open');
+                    blurOverlay.classList.add('active');
+                    body.classList.add('no-scroll');
+                } else {
+                    sideMenu.classList.remove('open');
+                    blurOverlay.classList.remove('active');
+                    body.classList.remove('no-scroll');
+                }
+            }
+        }
+    });
+});
+
+function navData() {
+    return {
+        isOpaque: false,
+        get currentPage() {
+            const path = window.location.pathname;
+            return path.split('/').pop().replace('.html', '');
+        },
+        get isModelPage() {
+            const modelPages = ['nemesis', 'black-widow', 'configurator'];
+            return modelPages.includes(this.currentPage);
+        },
+        init() {
+            // Initial check
+            this.isOpaque = window.scrollY > 2;
+
+            // Handle scroll opacity
+            window.addEventListener('scroll', () => {
+                this.isOpaque = window.scrollY > 2;
+                const navbar = document.getElementById('navbar');
+                if (navbar) {
+                    if (this.isOpaque) {
+                        navbar.classList.add('opaque');
+                    } else {
+                        navbar.classList.remove('opaque');
+                    }
+                }
+            });
+
+            // Handle dropdown padding
+            const nav = document.querySelector('header nav');
+            if (nav) {
+                nav.querySelectorAll('ul li').forEach(li => {
+                    const subList = li.querySelector('ul');
+                    if (subList) {
+                        li.addEventListener('mouseenter', () => {
+                            if (this.isOpaque) {
+                                const itemCount = subList.querySelectorAll('li').length;
+                                document.querySelectorAll('.opaque').forEach(element => {
+                                    element.style.paddingBottom = `${itemCount * 1.5}rem`;
+                                });
+                            }
+                        });
+
+                        li.addEventListener('mouseleave', () => {
+                            if (this.isOpaque) {
+                                document.querySelectorAll('.opaque').forEach(element => {
+                                    element.style.paddingBottom = '';
+                                });
+                            }
+                        });
+                    }
+                });
+            }
+
+            // Setup blur overlay click handler
+            const blurOverlay = document.getElementById('blur-overlay');
+            if (blurOverlay) {
+                blurOverlay.addEventListener('click', () => Alpine.store('nav').toggle());
+            }
+        }
+    }
 }
