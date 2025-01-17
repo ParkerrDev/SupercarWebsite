@@ -13,14 +13,14 @@
             </ul>
         </li>
 
-        <li class="main-nav"><a href="#">About Us</a>
+        <li class="main-nav"><a :class="{ 'active': currentPage === 'about-us' }" href="#">About Us</a>
             <ul class="dropdown" aria-label="submenu">
                 <li><a :class="{ 'active': currentPage === 'about-us' }" href="about-us.html">Our Story</a></li>
                 <li><a :class="{ 'active': currentPage === 'events' }" href="events.html">Events</a></li>
             </ul>
         </li>
         <li>
-            <a href="index.html"><img id="logo" src="imgs/logo.png" alt="Trion Logo"></a>
+            <a href="index.html"><img id="logo" src="imgs/logo.webp" alt="Trion Logo"></a>
         </li>
         <li class="main-nav"><a :class="{ 'active': currentPage === 'configurator' }" href="configurator.html">Configure</a>
             <ul class="dropdown" aria-label="submenu">

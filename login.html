@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trion - Login</title>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="icon" type="image/x-icon" href="imgs/icon.png">
+    <link rel="icon" type="image/x-icon" href="imgs/icon.webp">
     <script async src="js/main.js"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="js/alpine-utils.js"></script>
@@ -17,7 +17,7 @@
 <body id="login">
     <header>
         <a href="/"><img id="close-menu-button" src="svg/back-arrow.svg" alt="Go Back"></a>
-        <a href="index.html"><img class="floating-logo" src="imgs/logo.png" alt="Trion Logo"></a>
+        <a href="index.html"><img class="floating-logo" src="imgs/logo.webp" alt="Trion Logo"></a>
     </header>
 
     <main>
@@ -45,12 +45,7 @@
     </main>
 
     <footer>
-        <div id="privacy">
-            <p>&copy; 2025 by Trion.</p>
-            <a href="https://www.figma.com/exit?url=https%3A%2F%2Fwww.trionsupercars.com%2Fprivacy">
-                <p>Privacy Notice</p>
-            </a>
-        </div>
+        <template x-data x-include="templates/minimal-footer.html"></template>
     </footer>
 </body>
 

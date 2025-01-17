@@ -27,7 +27,7 @@
     <ul class="expandable-list">
         <div id="mobile-primary-navigation">
             <a class="active" href="/">Home</a>
-            <a href="about-us.html">About Us</a>
+            <a :class="{ 'active': currentPage === 'about-us' }" href="about-us.html">About Us</a>
             <a href="shop.html">Shop</a>
 
             <li class="list-item"

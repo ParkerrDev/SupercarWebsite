@@ -542,7 +542,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
 
 #contact {
     margin-top: 12vh;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 #support {
@@ -694,7 +694,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../imgs/blackwidow-front.jpeg);
+    background-image: url(../imgs/blackwidow-front.webp);
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 90% 100%, 0 100%);
 }
@@ -761,7 +761,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url(../imgs/nemesis-side-upscaled.jpg);
+    background-image: url(../imgs/nemesis-side-upscaled.webp);
     z-index: -1;
     outline: 10px solid white;
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 0 100%);
@@ -790,7 +790,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
 .hero {
     align-items: center;
     background-attachment: fixed;
-    /* background-image: url(../imgs/hero-scaled.png); */
+    /* background-image: url(../imgs/hero-scaled.webp); */
     background-position: top center;
     background-size: cover;
     display: flex;
@@ -897,11 +897,14 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
     width: 25%;
 }
 
+.quarter article p {
+    text-align: center;
+}
+
 .quarter img {
     object-fit: cover;
     padding: 0.5em;
 }
-
 
 .row {
     display: flex;
@@ -977,7 +980,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
 #hpimage {
     align-items: center;
     background-attachment: fixed;
-    background-image: url(../imgs/nemesis-road-tilt-upscaled.png);
+    background-image: url(../imgs/nemesis-road-tilt-upscaled.webp);
     background-position: 0 10%;
     background-size: cover;
     display: flex;
@@ -1015,7 +1018,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
     z-index: -1;
     /* background-position-y: 100%;
     background-position-x: 100%; */
-    background-image: url(../imgs/blackwidow-upscaled.jpg);
+    background-image: url(../imgs/blackwidow-upscaled.webp);
 }
 
 #blackwidowhero article {
@@ -1057,7 +1060,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
     z-index: -1;
     background-position-y: 100%;
     background-position-x: 100%;
-    background-image: url(../imgs/nemesis-black-optimized.jpg);
+    background-image: url(../imgs/nemesis-black-optimized.webp);
 }
 
 #nemesishero article {
@@ -1163,7 +1166,7 @@ body:not(#home):not(#login):not(#support):not(#configurator):not(#contact) main 
 
 .car-button {
     border: 1px solid white;
-    font-family: "Quattrocento Sans", sans-serif;
+    /* font-family: "Quattrocento Sans", sans-serif; */
     text-transform: uppercase;
     letter-spacing: 1px;
     background-color: black;
@@ -1465,7 +1468,7 @@ input[type="radio"]:checked+.material-option {
 .shop-hero.main {
     height: 65vh;
     margin-top: 20vh;
-    background-image: url(../imgs/shop/shop-hero.png);
+    background-image: url(../imgs/shop/shop-hero.webp);
 }
 
 .shop-hero.main h1 {
@@ -1477,7 +1480,7 @@ input[type="radio"]:checked+.material-option {
 }
 
 /* .shop-hero .men {
-    background-image: url(../imgs/shop/shop-men.png);
+    background-image: url(../imgs/shop/shop-men.webp);
     background-repeat: no-repeat;
     background-size: 90%;
     min-width: 100vw;
@@ -1501,7 +1504,7 @@ input[type="radio"]:checked+.material-option {
 }
 
 .shop-hero .women {
-    background-image: url(../imgs/shop/women.png);
+    background-image: url(../imgs/shop/women.webp);
     background-repeat: no-repeat;
     background-size: 90%;
     min-width: 100vw;
@@ -1525,7 +1528,7 @@ input[type="radio"]:checked+.material-option {
 }
 
 .shop-hero .children {
-    background-image: url(../imgs/shop/children.png);
+    background-image: url(../imgs/shop/children.webp);
     background-repeat: no-repeat;
     background-size: 90%;
     min-width: 100vw;
@@ -1600,7 +1603,7 @@ input[type="radio"]:checked+.material-option {
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    font-family: "Quattrocento Sans", sans-serif;
+    /* font-family: "Quattrocento Sans", sans-serif; */
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -1660,7 +1663,7 @@ input[type="radio"]:checked+.material-option {
     border: none;
     padding: 0.5rem 1rem;
     border-radius: 5px;
-    font-family: "Quattrocento Sans", sans-serif;
+    /* font-family: "Quattrocento Sans", sans-serif; */
     cursor: pointer;
     transition: background-color 0.3s ease;
     text-decoration: none;
@@ -1729,8 +1732,6 @@ input[type="radio"]:checked+.material-option {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
-    font-family: "Quattrocento Sans", sans-serif;
 }
 
 .title-wrapper {
@@ -1867,7 +1868,15 @@ input[type="radio"]:checked+.material-option {
 #contact textarea {
     height: 2rem;
     background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    border-radius: 2px;
+    width: 100%;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 4px 4px inset;
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 50vw;
 }
+
 
 #contact textarea {
     height: 5rem;
@@ -1910,10 +1919,6 @@ footer a {
     border: none;
 }
 
-body#contact-us footer {
-    margin-top: 25vh;
-}
-
 #footer-layout {
     display: flex;
     flex-direction: row;
@@ -1936,7 +1941,7 @@ body#contact-us footer {
 #nemesisimage {
     align-items: center;
     background-attachment: fixed;
-    background-image: url(../imgs/yellow-upscaled.png);
+    background-image: url(../imgs/yellow-upscaled.webp);
     background-position: 0 80%;
     background-size: cover;
     display: flex;
@@ -1963,7 +1968,7 @@ body#black-widow main {
 #blackwidowimage {
     align-items: center;
     background-attachment: fixed;
-    background-image: url(../imgs/blackwidow-front.jpeg);
+    background-image: url(../imgs/blackwidow-front.webp);
     background-position: 0 80%;
     background-size: cover;
     display: flex;
@@ -2783,15 +2788,6 @@ ul.expandable-list>li>ul.sub-list>li>a {
 .overlay-buttons .button-red {
     flex: 1;
 }
-
-
-
-
-
-
-
-
-
 
 
 /* h1 span:last-of-type {
